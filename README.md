@@ -7,4 +7,4 @@ Delo pri predmetu Osnove informacijskih sistemov UNI, Fakulteta za računalništ
 
 Seznam rešenih vaj:
 ---------
-- V01 -> V05
+- V01 -> V06
