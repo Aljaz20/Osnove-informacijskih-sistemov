@@ -1,0 +1,127 @@
+<div class="container text-center pb-0">
+    <div class="row">
+        <div class="col-md-6">
+            <h3><i class="fa-solid fa-filter-circle-dollar"></i>Pregled dopustov</h3>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="iskalniNiz" class="form-control d-inline-block rob senca spodnjiodmik"
+                           placeholder="iskalni niz" padding-bottom="14px"/>
+                </div>
+            </div>
+            <div>
+                <form
+                        action="/izpisiRacunBaza"
+                        method="post"
+                        enctype="multipart/form-data"
+                >
+                    <div class="form-group">
+                        <select
+                                size="10"
+                                id="seznamRacunov"
+                                name="seznamRacunov"
+                                class="form-control form-control-sm odmik rob senca"
+                        >
+                            {{#each seznamRacunov as |racun|}}
+                                <option
+                                        value="{{racun.InvoiceId}}"
+                                        customerId="{{racun.CustomerId}}"
+                                        selected
+                                >
+                                    {{racun.Naziv}}
+                                </option>
+                            {{/each}}
+                            
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input
+                                type="submit"
+                                class="btn btn-secondary btn-sm"
+                                value="Podrobnosti izleta"
+                        />
+                    </div>
+                </form>
+                <div class="help-block"><small id="skupnaCenaIzleta"></small></div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h3><i class="fa-regular fa-hand-point-right"></i>Izbira uporabnika</h3>
+            <div>
+                <select
+                        size="13"
+                        id="seznamStrank"
+                        name="seznamStrank"
+                        class="form-control form-control-sm odmik rob senca"
+                >
+                    {{#each seznamStrank as |stranka|}}
+                        <option value="{{stranka.CustomerId}}">
+                            {{{stranka.Country}}}
+                            |
+                            {{stranka.FirstName}}
+                            {{stranka.LastName}},
+                            {{stranka.Email}}
+                            {{#if stranka.Company}}
+                                ({{stranka.Company}})
+                            {{/if}}
+                        </option>
+                    {{/each}}
+                </select>
+            </div>
+            <br/>
+        </div>
+
+        <div class="col-md-6">
+            <h3><i class="fa-solid fa-table"></i>Statistika v tabeli</h3>
+            <span>V tabeli je navedena osnovna statistika o destinacijah ter njihovih lastnosti.</span>
+
+            <table class="poravnavanasredino">
+                <tr style="background-color:#E4FDEA">
+                    <td style="color:darkgrey" rowspan="0" align="center"><i>Lastnosti</i></td>
+                    <td></td>
+                    <td style="color:darkgrey" colspan="3" align="center"><i>Destinacije</i></td>
+                </tr>
+                <tr style="background-color: #CCF3D5;">
+                    <th class="diagonala"></th>
+                    <th style="border-bottom: 3px dashed green;">Turistične atrakcije</th>
+                    <th style="border-bottom: 3px dashed green;">Živalski vrtovi</th>
+                    <th style="border-bottom: 3px dashed green;">Hostli</th>
+                </tr>
+                <tr>
+                    <th style="border-right: 3px dashed green; background-color: #CCF3D5;">Vsi</th>
+                    <td style="border-right: 1px solid darkgrey; border-bottom: 1px solid darkgrey;">{{ atrakcije.vsi }}</td>
+                    <td style="border-right: 1px solid darkgrey; border-bottom: 1px solid darkgrey;">{{ zoo.vsi }}</td>
+                    <td style="border-right: 1px solid darkgrey; border-bottom: 1px solid darkgrey;">{{ hostli.vsi }}</td>
+                </tr>
+                <tr>
+                    <th style="border-right: 3px dashed green; background-color: #CCF3D5;">Izven Ljubljane</th>
+                    <td style="border-right: 1px solid darkgrey; border-bottom: 1px solid darkgrey;">{{ atrakcije.izvenLjubljane }}</td>
+                    <td style="border-right: 1px solid darkgrey; border-bottom: 1px solid darkgrey;">{{ zoo.izvenLjubljane }}</td>
+                    <td style="border-right: 1px solid darkgrey; border-bottom: 1px solid darkgrey;">{{ hostli.izvenLjubljane }}</td>
+                </tr>
+                <tr>
+                    <th style="border-right: 3px dashed green; background-color: #CCF3D5;">Spletna stran</th>
+                    <td style="border-right: 1px solid darkgrey; border-bottom: 1px solid darkgrey;">{{ atrakcije.spletnaStran }}</td>
+                    <td style="border-right: 1px solid darkgrey; border-bottom: 1px solid darkgrey;">{{ zoo.spletnaStran }}</td>
+                    <td style="border-right: 1px solid darkgrey; border-bottom: 1px solid darkgrey;">{{ hostli.spletnaStran }}</td>
+                </tr>
+                <tr>
+                    <th style="border-right: 3px dashed green; background-color: #CCF3D5;">Wikidata</th>
+                    <td style="border-right: 1px solid darkgrey; border-bottom: 1px solid darkgrey;">{{ atrakcije.wikidata }}</td>
+                    <td style="border-right: 1px solid darkgrey; border-bottom: 1px solid darkgrey;">{{ zoo.wikidata }}</td>
+                    <td style="border-right: 1px solid darkgrey; border-bottom: 1px solid darkgrey;">{{ hostli.wikidata }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <h3><i class="fa-solid fa-chart-pie"></i>Vizualizacija podatkov</h3>
+            <span>V grafu prikažite poljubno vizualizacijo podatkov: podatkovna baza, zunanji vir ali oboje.</span>
+            <div id="vsebnikGrafa" style="height: 300px; width: 100%; background-color: lightgray"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="skripte/prijava.js"></script>

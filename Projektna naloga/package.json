@@ -1,0 +1,15 @@
+{
+  "name": "dn",
+  "description": "Spletna aplikacija FRI izletnik",
+  "author": "Dejan Lavbič <Dejan@lavbic.net> & Sandi Gec <sandi.gec@fri.uni-lj.si>",
+  "dependencies": {
+    "axios": "*",
+    "ember-truth-helpers": "^3.1.1",
+    "express": "*",
+    "express-session": "*",
+    "formidable": "*",
+    "hbs": "*",
+    "sqlite3": "*"
+  },
+  "private": true
+}
