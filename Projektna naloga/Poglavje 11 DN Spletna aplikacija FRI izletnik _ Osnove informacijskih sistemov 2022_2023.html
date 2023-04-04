@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN -->
+<html lang="" xml:lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Poglavje 11 DN Spletna aplikacija FRI izletnik | Osnove informacijskih sistemov 2022/2023</title>
+  <meta name="description" content="Skripta za pomoč pri predmetu Osnove informacijskih sistemov 2022/2023">
+  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Poglavje 11 DN Spletna aplikacija FRI izletnik | Osnove informacijskih sistemov 2022/2023">
+  <meta property="og:type" content="book">
+  
+  <meta property="og:description" content="Skripta za pomoč pri predmetu Osnove informacijskih sistemov 2022/2023">
+  
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Poglavje 11 DN Spletna aplikacija FRI izletnik | Osnove informacijskih sistemov 2022/2023">
+  
+  <meta name="twitter:description" content="Skripta za pomoč pri predmetu Osnove informacijskih sistemov 2022/2023">
+  
+
+<meta name="author" content="izr. prof. dr. Dejan Lavbič">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html">
+<link rel="next" href="https://teaching.lavbic.net/OIS/2022-2023/P6.html">
+<script src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/jquery-3.6.0.min.js.prenos"></script>
+<script src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/fuse.min.js.prenos"></script>
+<link href="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/style.css" rel="stylesheet">
+<link href="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/plugin-table.css" rel="stylesheet">
+<link href="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/plugin-bookdown.css" rel="stylesheet">
+<link href="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/plugin-highlight.css" rel="stylesheet">
+<link href="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/plugin-search.css" rel="stylesheet">
+<link href="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/plugin-fontsettings.css" rel="stylesheet">
+<link href="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/plugin-clipboard.css" rel="stylesheet">
+
+
+
+
+
+
+
+
+<link href="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/anchor-sections.css" rel="stylesheet">
+<link href="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/anchor-sections-hash.css" rel="stylesheet">
+<script src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/anchor-sections.js.prenos"></script>
+<script src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/kePrint.js.prenos"></script>
+<link href="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/lightable.css" rel="stylesheet">
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/stil.css" type="text/css">
+<script type="text/javascript" async="" src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/MathJax.js.prenos"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888; display: contents}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.mjx-chtml {display: inline-block; line-height: 0; text-indent: 0; text-align: left; text-transform: none; font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; letter-spacing: normal; word-wrap: normal; word-spacing: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; margin: 0; padding: 1px 0}
+.MJXc-display {display: block; text-align: center; margin: 1em 0; padding: 0}
+.mjx-chtml[tabindex]:focus, body :focus .mjx-chtml[tabindex] {display: inline-table}
+.mjx-full-width {text-align: center; display: table-cell!important; width: 10000em}
+.mjx-math {display: inline-block; border-collapse: separate; border-spacing: 0}
+.mjx-math * {display: inline-block; -webkit-box-sizing: content-box!important; -moz-box-sizing: content-box!important; box-sizing: content-box!important; text-align: left}
+.mjx-numerator {display: block; text-align: center}
+.mjx-denominator {display: block; text-align: center}
+.MJXc-stacked {height: 0; position: relative}
+.MJXc-stacked > * {position: absolute}
+.MJXc-bevelled > * {display: inline-block}
+.mjx-stack {display: inline-block}
+.mjx-op {display: block}
+.mjx-under {display: table-cell}
+.mjx-over {display: block}
+.mjx-over > * {padding-left: 0px!important; padding-right: 0px!important}
+.mjx-under > * {padding-left: 0px!important; padding-right: 0px!important}
+.mjx-stack > .mjx-sup {display: block}
+.mjx-stack > .mjx-sub {display: block}
+.mjx-prestack > .mjx-presup {display: block}
+.mjx-prestack > .mjx-presub {display: block}
+.mjx-delim-h > .mjx-char {display: inline-block}
+.mjx-surd {vertical-align: top}
+.mjx-surd + .mjx-box {display: inline-flex}
+.mjx-mphantom * {visibility: hidden}
+.mjx-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 2px 3px; font-style: normal; font-size: 90%}
+.mjx-annotation-xml {line-height: normal}
+.mjx-menclose > svg {fill: none; stroke: currentColor; overflow: visible}
+.mjx-mtr {display: table-row}
+.mjx-mlabeledtr {display: table-row}
+.mjx-mtd {display: table-cell; text-align: center}
+.mjx-label {display: table-row}
+.mjx-box {display: inline-block}
+.mjx-block {display: block}
+.mjx-span {display: inline}
+.mjx-char {display: block; white-space: pre}
+.mjx-itable {display: inline-table; width: auto}
+.mjx-row {display: table-row}
+.mjx-cell {display: table-cell}
+.mjx-table {display: table; width: 100%}
+.mjx-line {display: block; height: 0}
+.mjx-strut {width: 0; padding-top: 1em}
+.mjx-vsize {width: 0}
+.MJXc-space1 {margin-left: .167em}
+.MJXc-space2 {margin-left: .222em}
+.MJXc-space3 {margin-left: .278em}
+.mjx-chartest {display: block; visibility: hidden; position: absolute; top: 0; line-height: normal; font-size: 500%}
+.mjx-chartest .mjx-char {display: inline}
+.mjx-chartest .mjx-box {padding-top: 1000px}
+.MJXc-processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MJXc-processed {display: none}
+.mjx-test {font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow: hidden; height: 1px}
+.mjx-test.mjx-test-display {display: table!important}
+.mjx-test.mjx-test-inline {display: inline!important; margin-right: -1px}
+.mjx-test.mjx-test-default {display: block!important; clear: both}
+.mjx-ex-box {display: inline-block!important; position: absolute; overflow: hidden; min-height: 0; max-height: none; padding: 0; border: 0; margin: 0; width: 1px; height: 60ex}
+.mjx-test-inline .mjx-left-box {display: inline-block; width: 0; float: left}
+.mjx-test-inline .mjx-right-box {display: inline-block; width: 0; float: right}
+.mjx-test-display .mjx-right-box {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+#MathJax_CHTML_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.mjx-chtml .mjx-noError {line-height: 1.2; vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+.MJXc-TeX-unknown-R {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: normal; font-weight: normal}
+.MJXc-TeX-unknown-I {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: italic; font-weight: normal}
+.MJXc-TeX-unknown-B {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: normal; font-weight: bold}
+.MJXc-TeX-unknown-BI {font-family: STIXGeneral,'Cambria Math','Arial Unicode MS',serif; font-style: italic; font-weight: bold}
+.MJXc-TeX-ams-R {font-family: MJXc-TeX-ams-R,MJXc-TeX-ams-Rw}
+.MJXc-TeX-cal-B {font-family: MJXc-TeX-cal-B,MJXc-TeX-cal-Bx,MJXc-TeX-cal-Bw}
+.MJXc-TeX-frak-R {font-family: MJXc-TeX-frak-R,MJXc-TeX-frak-Rw}
+.MJXc-TeX-frak-B {font-family: MJXc-TeX-frak-B,MJXc-TeX-frak-Bx,MJXc-TeX-frak-Bw}
+.MJXc-TeX-math-BI {font-family: MJXc-TeX-math-BI,MJXc-TeX-math-BIx,MJXc-TeX-math-BIw}
+.MJXc-TeX-sans-R {font-family: MJXc-TeX-sans-R,MJXc-TeX-sans-Rw}
+.MJXc-TeX-sans-B {font-family: MJXc-TeX-sans-B,MJXc-TeX-sans-Bx,MJXc-TeX-sans-Bw}
+.MJXc-TeX-sans-I {font-family: MJXc-TeX-sans-I,MJXc-TeX-sans-Ix,MJXc-TeX-sans-Iw}
+.MJXc-TeX-script-R {font-family: MJXc-TeX-script-R,MJXc-TeX-script-Rw}
+.MJXc-TeX-type-R {font-family: MJXc-TeX-type-R,MJXc-TeX-type-Rw}
+.MJXc-TeX-cal-R {font-family: MJXc-TeX-cal-R,MJXc-TeX-cal-Rw}
+.MJXc-TeX-main-B {font-family: MJXc-TeX-main-B,MJXc-TeX-main-Bx,MJXc-TeX-main-Bw}
+.MJXc-TeX-main-I {font-family: MJXc-TeX-main-I,MJXc-TeX-main-Ix,MJXc-TeX-main-Iw}
+.MJXc-TeX-main-R {font-family: MJXc-TeX-main-R,MJXc-TeX-main-Rw}
+.MJXc-TeX-math-I {font-family: MJXc-TeX-math-I,MJXc-TeX-math-Ix,MJXc-TeX-math-Iw}
+.MJXc-TeX-size1-R {font-family: MJXc-TeX-size1-R,MJXc-TeX-size1-Rw}
+.MJXc-TeX-size2-R {font-family: MJXc-TeX-size2-R,MJXc-TeX-size2-Rw}
+.MJXc-TeX-size3-R {font-family: MJXc-TeX-size3-R,MJXc-TeX-size3-Rw}
+.MJXc-TeX-size4-R {font-family: MJXc-TeX-size4-R,MJXc-TeX-size4-Rw}
+.MJXc-TeX-vec-R {font-family: MJXc-TeX-vec-R,MJXc-TeX-vec-Rw}
+.MJXc-TeX-vec-B {font-family: MJXc-TeX-vec-B,MJXc-TeX-vec-Bx,MJXc-TeX-vec-Bw}
+@font-face {font-family: MJXc-TeX-ams-R; src: local('MathJax_AMS'), local('MathJax_AMS-Regular')}
+@font-face {font-family: MJXc-TeX-ams-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/eot/MathJax_AMS-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_AMS-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_AMS-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-cal-B; src: local('MathJax_Caligraphic Bold'), local('MathJax_Caligraphic-Bold')}
+@font-face {font-family: MJXc-TeX-cal-Bx; src: local('MathJax_Caligraphic'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-cal-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-frak-R; src: local('MathJax_Fraktur'), local('MathJax_Fraktur-Regular')}
+@font-face {font-family: MJXc-TeX-frak-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-frak-B; src: local('MathJax_Fraktur Bold'), local('MathJax_Fraktur-Bold')}
+@font-face {font-family: MJXc-TeX-frak-Bx; src: local('MathJax_Fraktur'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-frak-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/eot/MathJax_Fraktur-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Fraktur-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Fraktur-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-math-BI; src: local('MathJax_Math BoldItalic'), local('MathJax_Math-BoldItalic')}
+@font-face {font-family: MJXc-TeX-math-BIx; src: local('MathJax_Math'); font-weight: bold; font-style: italic}
+@font-face {font-family: MJXc-TeX-math-BIw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/eot/MathJax_Math-BoldItalic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Math-BoldItalic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Math-BoldItalic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-R; src: local('MathJax_SansSerif'), local('MathJax_SansSerif-Regular')}
+@font-face {font-family: MJXc-TeX-sans-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-B; src: local('MathJax_SansSerif Bold'), local('MathJax_SansSerif-Bold')}
+@font-face {font-family: MJXc-TeX-sans-Bx; src: local('MathJax_SansSerif'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-sans-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-sans-I; src: local('MathJax_SansSerif Italic'), local('MathJax_SansSerif-Italic')}
+@font-face {font-family: MJXc-TeX-sans-Ix; src: local('MathJax_SansSerif'); font-style: italic}
+@font-face {font-family: MJXc-TeX-sans-Iw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/eot/MathJax_SansSerif-Italic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_SansSerif-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_SansSerif-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-script-R; src: local('MathJax_Script'), local('MathJax_Script-Regular')}
+@font-face {font-family: MJXc-TeX-script-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/eot/MathJax_Script-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Script-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Script-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-type-R; src: local('MathJax_Typewriter'), local('MathJax_Typewriter-Regular')}
+@font-face {font-family: MJXc-TeX-type-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/eot/MathJax_Typewriter-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Typewriter-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Typewriter-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-cal-R; src: local('MathJax_Caligraphic'), local('MathJax_Caligraphic-Regular')}
+@font-face {font-family: MJXc-TeX-cal-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/eot/MathJax_Caligraphic-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-B; src: local('MathJax_Main Bold'), local('MathJax_Main-Bold')}
+@font-face {font-family: MJXc-TeX-main-Bx; src: local('MathJax_Main'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-main-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/eot/MathJax_Main-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-I; src: local('MathJax_Main Italic'), local('MathJax_Main-Italic')}
+@font-face {font-family: MJXc-TeX-main-Ix; src: local('MathJax_Main'); font-style: italic}
+@font-face {font-family: MJXc-TeX-main-Iw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/eot/MathJax_Main-Italic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-main-R; src: local('MathJax_Main'), local('MathJax_Main-Regular')}
+@font-face {font-family: MJXc-TeX-main-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/eot/MathJax_Main-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-math-I; src: local('MathJax_Math Italic'), local('MathJax_Math-Italic')}
+@font-face {font-family: MJXc-TeX-math-Ix; src: local('MathJax_Math'); font-style: italic}
+@font-face {font-family: MJXc-TeX-math-Iw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/eot/MathJax_Math-Italic.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size1-R; src: local('MathJax_Size1'), local('MathJax_Size1-Regular')}
+@font-face {font-family: MJXc-TeX-size1-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/eot/MathJax_Size1-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size2-R; src: local('MathJax_Size2'), local('MathJax_Size2-Regular')}
+@font-face {font-family: MJXc-TeX-size2-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/eot/MathJax_Size2-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size3-R; src: local('MathJax_Size3'), local('MathJax_Size3-Regular')}
+@font-face {font-family: MJXc-TeX-size3-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/eot/MathJax_Size3-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-size4-R; src: local('MathJax_Size4'), local('MathJax_Size4-Regular')}
+@font-face {font-family: MJXc-TeX-size4-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/eot/MathJax_Size4-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-vec-R; src: local('MathJax_Vector'), local('MathJax_Vector-Regular')}
+@font-face {font-family: MJXc-TeX-vec-Rw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/eot/MathJax_Vector-Regular.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Regular.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Vector-Regular.otf') format('opentype')}
+@font-face {font-family: MJXc-TeX-vec-B; src: local('MathJax_Vector Bold'), local('MathJax_Vector-Bold')}
+@font-face {font-family: MJXc-TeX-vec-Bx; src: local('MathJax_Vector'); font-weight: bold}
+@font-face {font-family: MJXc-TeX-vec-Bw; src /*1*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/eot/MathJax_Vector-Bold.eot'); src /*2*/: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/woff/MathJax_Vector-Bold.woff') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/fonts/HTML-CSS/TeX/otf/MathJax_Vector-Bold.otf') format('opentype')}
+</style></head>
+
+<body data-new-gr-c-s-check-loaded="14.1102.0" data-gr-ext-installed=""><div id="MathJax_Message" style="display: none;"></div>
+
+
+
+  <div class="book without-animation with-summary font-size-1 font-family-1" data-basepath=".">
+
+    <div class="book-summary"><div class="book-search" role="search"><label for="search-box" aria-hidden="false" hidden="hidden">Type to search</label><input id="search-box" type="search" class="form-control" placeholder="Type to search (Enter for navigation)" title="Use Enter or the &lt;Down&gt; key to navigate to the next match, or the &lt;Up&gt; key to the previous match"></div>
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="https://teaching.lavbic.net/OIS/2022-2023/index.html#terminski-plan-izvajanja-predmeta">OIS 2022/2023 terminski plan</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/index.html"><i class="fa fa-check"></i>Uvod</a>
+<ul style="display: none;">
+<li class="chapter" data-level="" data-path="index.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/index.html#splo%C5%A1ne-informacije"><i class="fa fa-check"></i>Splošne informacije</a>
+<ul style="display: none;">
+<li class="chapter" data-level="" data-path="index.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/index.html#predavatelj"><i class="fa fa-check"></i>Predavatelj</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/index.html#asistent"><i class="fa fa-check"></i>Asistent</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/index.html#terminski-plan-izvajanja-predmeta"><i class="fa fa-check"></i>Terminski plan izvajanja predmeta</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/index.html#pravila-igre"><i class="fa fa-check"></i>Pravila igre</a>
+<ul style="display: none;">
+<li class="chapter" data-level="" data-path="index.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/index.html#predavanja"><i class="fa fa-check"></i>Predavanja</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/index.html#vaje"><i class="fa fa-check"></i>Vaje</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/index.html#ocenjevanje"><i class="fa fa-check"></i>Ocenjevanje</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/index.html#pisni-izpiti"><i class="fa fa-check"></i>Pisni izpiti</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/index.html#priporo%C4%8Dena-literatura"><i class="fa fa-check"></i>Priporočena literatura</a></li>
+</ul></li>
+<li class="part"><span><b>I sklop: Poslovni informacijski sistemi in upravljanje informatike</b></span></li>
+<li class="chapter" data-level="1" data-path="P1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1.html"><i class="fa fa-check"></i><b>1</b> <span class="sklop1 oznaka">P1</span> Upravljanje IT</a>
+<ul style="display: none;">
+<li class="chapter" data-level="1.1" data-path="P1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1.html#uvod-1"><i class="fa fa-check"></i><b>1.1</b> Uvod</a></li>
+<li class="chapter" data-level="1.2" data-path="P1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1.html#upravljanje-it-in-vloga-informatike"><i class="fa fa-check"></i><b>1.2</b> Upravljanje IT in vloga informatike</a>
+<ul style="display: none;">
+<li class="chapter" data-level="1.2.1" data-path="P1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1.html#vloga-vodstva-pri-upravljanju-it"><i class="fa fa-check"></i><b>1.2.1</b> Vloga vodstva pri upravljanju IT</a></li>
+<li class="chapter" data-level="1.2.2" data-path="P1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1.html#klju%C4%8Dna-vpra%C5%A1anja-o-it"><i class="fa fa-check"></i><b>1.2.2</b> Ključna vprašanja o IT</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="P1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1.html#ogrodje-za-upravljanje-it"><i class="fa fa-check"></i><b>1.3</b> Ogrodje za upravljanje IT</a>
+<ul style="display: none;">
+<li class="chapter" data-level="1.3.1" data-path="P1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1.html#klju%C4%8Dne-odlo%C4%8Ditve"><i class="fa fa-check"></i><b>1.3.1</b> Ključne odločitve</a></li>
+<li class="chapter" data-level="1.3.2" data-path="P1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1.html#klju%C4%8Dni-odlo%C4%8Devalci"><i class="fa fa-check"></i><b>1.3.2</b> Ključni odločevalci</a></li>
+<li class="chapter" data-level="1.3.3" data-path="P1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1.html#strukture-in-procesi-odlo%C4%8Danja"><i class="fa fa-check"></i><b>1.3.3</b> Strukture in procesi odločanja</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html"><i class="fa fa-check"></i><b>2</b> <span class="sklop1 oznaka">P1</span> → <span class="sklop3 oznaka">V1</span> Obvladovanje verzij</a>
+<ul style="display: none;">
+<li class="chapter" data-level="2.1" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#zgodovina-vcs"><i class="fa fa-check"></i><b>2.1</b> Zgodovina VCS</a></li>
+<li class="chapter" data-level="2.2" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#osnovne-operacije-vcs"><i class="fa fa-check"></i><b>2.2</b> Osnovne operacije VCS</a>
+<ul style="display: none;">
+<li class="chapter" data-level="2.2.1" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#VCS-create"><i class="fa fa-check"></i><b>2.2.1</b> Create</a></li>
+<li class="chapter" data-level="2.2.2" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#VCS-checkout"><i class="fa fa-check"></i><b>2.2.2</b> Checkout</a></li>
+<li class="chapter" data-level="2.2.3" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#VCS-commit"><i class="fa fa-check"></i><b>2.2.3</b> Commit</a></li>
+<li class="chapter" data-level="2.2.4" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#VCS-update"><i class="fa fa-check"></i><b>2.2.4</b> Update</a></li>
+<li class="chapter" data-level="2.2.5" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#VCS-add"><i class="fa fa-check"></i><b>2.2.5</b> Add</a></li>
+<li class="chapter" data-level="2.2.6" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#VCS-edit"><i class="fa fa-check"></i><b>2.2.6</b> Edit</a></li>
+<li class="chapter" data-level="2.2.7" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#VCS-delete"><i class="fa fa-check"></i><b>2.2.7</b> Delete</a></li>
+<li class="chapter" data-level="2.2.8" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#VCS-rename"><i class="fa fa-check"></i><b>2.2.8</b> Rename</a></li>
+<li class="chapter" data-level="2.2.9" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#VCS-move"><i class="fa fa-check"></i><b>2.2.9</b> Move</a></li>
+<li class="chapter" data-level="2.2.10" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#VCS-status"><i class="fa fa-check"></i><b>2.2.10</b> Status</a></li>
+<li class="chapter" data-level="2.2.11" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#VCS-diff"><i class="fa fa-check"></i><b>2.2.11</b> Diff</a></li>
+<li class="chapter" data-level="2.2.12" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#VCS-revert"><i class="fa fa-check"></i><b>2.2.12</b> Revert</a></li>
+<li class="chapter" data-level="2.2.13" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#VCS-log"><i class="fa fa-check"></i><b>2.2.13</b> Log</a></li>
+<li class="chapter" data-level="2.2.14" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#VCS-tag"><i class="fa fa-check"></i><b>2.2.14</b> Tag</a></li>
+<li class="chapter" data-level="2.2.15" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#VCS-branch"><i class="fa fa-check"></i><b>2.2.15</b> Branch</a></li>
+<li class="chapter" data-level="2.2.16" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#VCS-merge"><i class="fa fa-check"></i><b>2.2.16</b> Merge</a></li>
+<li class="chapter" data-level="2.2.17" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#VCS-resolve"><i class="fa fa-check"></i><b>2.2.17</b> Resolve</a></li>
+<li class="chapter" data-level="2.2.18" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#VCS-lock"><i class="fa fa-check"></i><b>2.2.18</b> Lock</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#posebnosti-dvcs"><i class="fa fa-check"></i><b>2.3</b> Posebnosti DVCS</a>
+<ul style="display: none;">
+<li class="chapter" data-level="2.3.1" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#clone"><i class="fa fa-check"></i><b>2.3.1</b> Clone</a></li>
+<li class="chapter" data-level="2.3.2" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#primerjava-cvcs-in-dvcs"><i class="fa fa-check"></i><b>2.3.2</b> Primerjava CVCS in DVCS</a></li>
+<li class="chapter" data-level="2.3.3" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#push"><i class="fa fa-check"></i><b>2.3.3</b> Push</a></li>
+<li class="chapter" data-level="2.3.4" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#pull"><i class="fa fa-check"></i><b>2.3.4</b> Pull</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#dobre-prakse-uporabe-git"><i class="fa fa-check"></i><b>2.4</b> Dobre prakse uporabe Git</a>
+<ul style="display: none;">
+<li class="chapter" data-level="2.4.1" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#osrednji-repozitorij-in-sodelovanje-med-skupinami"><i class="fa fa-check"></i><b>2.4.1</b> Osrednji repozitorij in sodelovanje med skupinami</a></li>
+<li class="chapter" data-level="2.4.2" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#razdelitev-po-vejah-razvoja"><i class="fa fa-check"></i><b>2.4.2</b> Razdelitev po vejah razvoja</a></li>
+<li class="chapter" data-level="2.4.3" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#sporo%C4%8Dila-uveljavitev"><i class="fa fa-check"></i><b>2.4.3</b> Sporočila uveljavitev</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="P1-V1.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P1-V1.html#dodatno-gradivo"><i class="fa fa-check"></i><b>2.5</b> Dodatno gradivo</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="P2.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P2.html" title="3 P2 Delovni model, arhitektura podjetja in vrednotenje naložb"><i class="fa fa-check"></i><b>3</b> <span class="sklop1 oznaka">P2</span> Delovni model, arhitektura podjetja in vrednotenje naložb</a>
+<ul style="display: none;">
+<li class="chapter" data-level="3.1" data-path="P2.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P2.html#delovni-model-in-zrelost-arhitekture-podjetja"><i class="fa fa-check"></i><b>3.1</b> Delovni model in zrelost arhitekture podjetja</a>
+<ul style="display: none;">
+<li class="chapter" data-level="3.1.1" data-path="P2.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P2.html#delovni-model"><i class="fa fa-check"></i><b>3.1.1</b> Delovni model</a></li>
+<li class="chapter" data-level="3.1.2" data-path="P2.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P2.html#arhitektura-podjetja"><i class="fa fa-check"></i><b>3.1.2</b> Arhitektura podjetja</a></li>
+<li class="chapter" data-level="3.1.3" data-path="P2.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P2.html#posledice-zrelosti-arhitekture-podjetja"><i class="fa fa-check"></i><b>3.1.3</b> Posledice zrelosti arhitekture podjetja</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="P2.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P2.html#vrednotenje-nalo%C5%BEb"><i class="fa fa-check"></i><b>3.2</b> Vrednotenje naložb</a>
+<ul style="display: none;">
+<li class="chapter" data-level="3.2.1" data-path="P2.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P2.html#parametri%C4%8Dni-pristop-od-zgoraj-navzdol"><i class="fa fa-check"></i><b>3.2.1</b> Parametrični pristop od zgoraj navzdol</a></li>
+<li class="chapter" data-level="3.2.2" data-path="P2.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P2.html#pristop-od-spodaj-navzgor"><i class="fa fa-check"></i><b>3.2.2</b> Pristop od spodaj navzgor</a></li>
+<li class="chapter" data-level="3.2.3" data-path="P2.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P2.html#ocena-prora%C4%8Duna"><i class="fa fa-check"></i><b>3.2.3</b> Ocena proračuna</a></li>
+<li class="chapter" data-level="3.2.4" data-path="P2.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P2.html#ocena-proracuna-s-pristopm-navzdol"><i class="fa fa-check"></i><b>3.2.4</b> Primer ocene proračuna s pristopom od zgoraj navzdol</a></li>
+<li class="chapter" data-level="3.2.5" data-path="P2.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P2.html#UCP"><i class="fa fa-check"></i><b>3.2.5</b> Formalna metoda za ocenjevanje stroškov programske opreme</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="P2.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P2.html#nematerialne-koristi"><i class="fa fa-check"></i><b>3.3</b> Nematerialne koristi</a>
+<ul style="display: none;">
+<li class="chapter" data-level="3.3.1" data-path="P2.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P2.html#zmogljivost-informacijske-tehnologije"><i class="fa fa-check"></i><b>3.3.1</b> Zmogljivost informacijske tehnologije</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="P2-V3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P2-V3.html"><i class="fa fa-check"></i><b>4</b> <span class="sklop1 oznaka">P2</span> → <span class="sklop3 oznaka">V3</span> Uvod v HTML in CSS</a>
+<ul style="display: none;">
+<li class="chapter" data-level="4.1" data-path="P2-V3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P2-V3.html#html"><i class="fa fa-check"></i><b>4.1</b> HTML</a>
+<ul style="display: none;">
+<li class="chapter" data-level="4.1.1" data-path="P2-V3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P2-V3.html#gradniki"><i class="fa fa-check"></i><b>4.1.1</b> Gradniki</a></li>
+<li class="chapter" data-level="4.1.2" data-path="P2-V3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P2-V3.html#zaklju%C4%8Dek"><i class="fa fa-check"></i><b>4.1.2</b> Zaključek</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="P2-V3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P2-V3.html#CSS"><i class="fa fa-check"></i><b>4.2</b> CSS</a>
+<ul style="display: none;">
+<li class="chapter" data-level="4.2.1" data-path="P2-V3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P2-V3.html#gradniki-1"><i class="fa fa-check"></i><b>4.2.1</b> Gradniki</a></li>
+<li class="chapter" data-level="4.2.2" data-path="P2-V3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P2-V3.html#zaklju%C4%8Dek-1"><i class="fa fa-check"></i><b>4.2.2</b> Zaključek</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="P3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3.html" title="5 P3 Tveganja, IT naložbeni portfelj in povračilo sredstev"><i class="fa fa-check"></i><b>5</b> <span class="sklop1 oznaka">P3</span> Tveganja, IT naložbeni portfelj in povračilo sredstev</a>
+<ul style="display: none;">
+<li class="chapter" data-level="5.1" data-path="P3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3.html#tveganja-pri-projektih-it"><i class="fa fa-check"></i><b>5.1</b> Tveganja pri projektih IT</a>
+<ul style="display: none;">
+<li class="chapter" data-level="5.1.1" data-path="P3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3.html#upo%C5%A1tevanje-tveganja-pri-vrednotenju-nalo%C5%BEb-v-it"><i class="fa fa-check"></i><b>5.1.1</b> Upoštevanje tveganja pri vrednotenju naložb v IT</a></li>
+<li class="chapter" data-level="5.1.2" data-path="P3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3.html#kako-podjetja-upo%C5%A1tevajo-tveganja"><i class="fa fa-check"></i><b>5.1.2</b> Kako podjetja upoštevajo tveganja?</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="P3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3.html#pristop-z-opcijami-pri-nalo%C5%BEbah-v-it"><i class="fa fa-check"></i><b>5.2</b> Pristop z opcijami pri naložbah v IT</a>
+<ul style="display: none;">
+<li class="chapter" data-level="5.2.1" data-path="P3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3.html#primer-starbuck"><i class="fa fa-check"></i><b>5.2.1</b> Primer Starbuck</a></li>
+<li class="chapter" data-level="5.2.2" data-path="P3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3.html#primer-opcije"><i class="fa fa-check"></i><b>5.2.2</b> Primer implementacije sistema</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="P3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3.html#ogrodje-za-vrednotenje-nalo%C5%BEb-v-it"><i class="fa fa-check"></i><b>5.3</b> Ogrodje za vrednotenje naložb v IT</a>
+<ul style="display: none;">
+<li class="chapter" data-level="5.3.1" data-path="P3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3.html#pasti-prekinitve"><i class="fa fa-check"></i><b>5.3.1</b> Pasti prekinitve</a></li>
+<li class="chapter" data-level="5.3.2" data-path="P3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3.html#pasti-odlo%C5%BEitve"><i class="fa fa-check"></i><b>5.3.2</b> Pasti odložitve</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="P3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3.html#it-nalo%C5%BEbeni-portfelj"><i class="fa fa-check"></i><b>5.4</b> IT naložbeni portfelj</a>
+<ul style="display: none;">
+<li class="chapter" data-level="5.4.1" data-path="P3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3.html#upravljanje-portfelja-it"><i class="fa fa-check"></i><b>5.4.1</b> Upravljanje portfelja IT</a></li>
+<li class="chapter" data-level="5.4.2" data-path="P3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3.html#lastnosti-razli%C4%8Dnih-skupin-sredstev-it"><i class="fa fa-check"></i><b>5.4.2</b> Lastnosti različnih skupin sredstev IT</a></li>
+<li class="chapter" data-level="5.4.3" data-path="P3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3.html#strate%C5%A1ka-usmeritev-in-upravljanje-portfelja"><i class="fa fa-check"></i><b>5.4.3</b> Strateška usmeritev in upravljanje portfelja</a></li>
+<li class="chapter" data-level="5.4.4" data-path="P3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3.html#proces-upravljanja-portfelja-it"><i class="fa fa-check"></i><b>5.4.4</b> Proces upravljanja portfelja IT</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="P3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3.html#povra%C4%8Dilo-sredstev-za-it"><i class="fa fa-check"></i><b>5.5</b> Povračilo sredstev za IT</a>
+<ul style="display: none;">
+<li class="chapter" data-level="5.5.1" data-path="P3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3.html#razumevanje-izziva-povra%C4%8Dila-sredstev-za-it"><i class="fa fa-check"></i><b>5.5.1</b> Razumevanje izziva povračila sredstev za IT</a></li>
+<li class="chapter" data-level="5.5.2" data-path="P3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3.html#razli%C4%8Dni-pristopi-povra%C4%8Dila-sredstev-za-it"><i class="fa fa-check"></i><b>5.5.2</b> Različni pristopi povračila sredstev za IT</a></li>
+<li class="chapter" data-level="5.5.3" data-path="P3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3.html#posledice-povra%C4%8Dil-sredstev-za-it"><i class="fa fa-check"></i><b>5.5.3</b> Posledice povračil sredstev za IT</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="P3-V3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3-V3.html" title="6 P3 → V3 JavaScript na strani odjemalca"><i class="fa fa-check"></i><b>6</b> <span class="sklop1 oznaka">P3</span> → <span class="sklop3 oznaka">V3</span> JavaScript na strani odjemalca</a>
+<ul style="display: none;">
+<li class="chapter" data-level="6.1" data-path="P3-V3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3-V3.html#JavaScript"><i class="fa fa-check"></i><b>6.1</b> JavaScript</a>
+<ul style="display: none;">
+<li class="chapter" data-level="6.1.1" data-path="P3-V3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3-V3.html#gradniki-2"><i class="fa fa-check"></i><b>6.1.1</b> Gradniki</a></li>
+<li class="chapter" data-level="6.1.2" data-path="P3-V3.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P3-V3.html#zaklju%C4%8Dek-2"><i class="fa fa-check"></i><b>6.1.2</b> Zaključek</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="P4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4.html" title="7 P4 Upravljanje sprememb, IS, podatek, informacija, znanje"><i class="fa fa-check"></i><b>7</b> <span class="sklop1 oznaka">P4</span> Upravljanje sprememb, IS, podatek, informacija, znanje</a>
+<ul style="display: none;">
+<li class="chapter" data-level="7.1" data-path="P4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4.html#upravljanje-sprememb"><i class="fa fa-check"></i><b>7.1</b> Upravljanje sprememb</a>
+<ul style="display: none;">
+<li class="chapter" data-level="7.1.1" data-path="P4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4.html#razumevanje-odpora-uporabnikov"><i class="fa fa-check"></i><b>7.1.1</b> Razumevanje odpora uporabnikov</a></li>
+<li class="chapter" data-level="7.1.2" data-path="P4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4.html#odpor-uporabnikov-do-sprememb-perspektiva-pristranskosti"><i class="fa fa-check"></i><b>7.1.2</b> Odpor uporabnikov do sprememb: perspektiva pristranskosti</a></li>
+<li class="chapter" data-level="7.1.3" data-path="P4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4.html#model-prilagajanja-uporabniku"><i class="fa fa-check"></i><b>7.1.3</b> Model prilagajanja uporabniku</a></li>
+<li class="chapter" data-level="7.1.4" data-path="P4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4.html#razli%C4%8Dni-modeli-sprejetosti-uporabnikov"><i class="fa fa-check"></i><b>7.1.4</b> Različni modeli sprejetosti uporabnikov</a></li>
+<li class="chapter" data-level="7.1.5" data-path="P4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4.html#klju%C4%8Dni-vzvodi-pri-uvajanju-informacijskega-sistema"><i class="fa fa-check"></i><b>7.1.5</b> Ključni vzvodi pri uvajanju informacijskega sistema</a></li>
+<li class="chapter" data-level="7.1.6" data-path="P4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4.html#kako-u%C4%8Dinkovito-uvesti-spremembe-kriti%C4%8Dni-dejavniki-uspeha"><i class="fa fa-check"></i><b>7.1.6</b> Kako učinkovito uvesti spremembe: kritični dejavniki uspeha</a></li>
+<li class="chapter" data-level="7.1.7" data-path="P4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4.html#primerjava-evolucijske-in-revolucionarne-spremembe"><i class="fa fa-check"></i><b>7.1.7</b> Primerjava evolucijske in revolucionarne spremembe</a></li>
+<li class="chapter" data-level="7.1.8" data-path="P4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4.html#projektno-vodenje-v-primerjavi-z-u%C4%8Dnim-pristopom"><i class="fa fa-check"></i><b>7.1.8</b> Projektno vodenje v primerjavi z učnim pristopom</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="P4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4.html#sistem"><i class="fa fa-check"></i><b>7.2</b> Sistem</a>
+<ul style="display: none;">
+<li class="chapter" data-level="7.2.1" data-path="P4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4.html#opredelitve-osnovnih-pojmov"><i class="fa fa-check"></i><b>7.2.1</b> Opredelitve osnovnih pojmov</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="P4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4.html#podatek-informacija-in-znanje"><i class="fa fa-check"></i><b>7.3</b> Podatek, informacija in znanje</a>
+<ul style="display: none;">
+<li class="chapter" data-level="7.3.1" data-path="P4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4.html#podatek-in-informacija"><i class="fa fa-check"></i><b>7.3.1</b> Podatek in informacija</a></li>
+<li class="chapter" data-level="7.3.2" data-path="P4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4.html#zna%C4%8Dilnosti-informacij"><i class="fa fa-check"></i><b>7.3.2</b> Značilnosti informacij</a></li>
+<li class="chapter" data-level="7.3.3" data-path="P4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4.html#raziskava-o-kakovosti-informacij"><i class="fa fa-check"></i><b>7.3.3</b> Raziskava o kakovosti informacij</a></li>
+<li class="chapter" data-level="7.3.4" data-path="P4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4.html#znanje"><i class="fa fa-check"></i><b>7.3.4</b> Znanje</a></li>
+<li class="chapter" data-level="7.3.5" data-path="P4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4.html#povezanost-podatka-informacije-in-znanja"><i class="fa fa-check"></i><b>7.3.5</b> Povezanost podatka, informacije in znanja</a></li>
+<li class="chapter" data-level="7.3.6" data-path="P4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4.html#primeri-interpretacij-informacij"><i class="fa fa-check"></i><b>7.3.6</b> Primeri interpretacij informacij</a></li>
+<li class="chapter" data-level="7.3.7" data-path="P4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4.html#znanje-vs.-v%C3%A9denje"><i class="fa fa-check"></i><b>7.3.7</b> Znanje vs.&nbsp;védenje</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="P4-V4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4-V4.html" title="8 P4 → V4 Odjemalec/strežnik in Node.js"><i class="fa fa-check"></i><b>8</b> <span class="sklop1 oznaka">P4</span> → <span class="sklop3 oznaka">V4</span> Odjemalec/strežnik in Node.js</a>
+<ul style="display: none;">
+<li class="chapter" data-level="8.1" data-path="P4-V4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4-V4.html#razvoj-enostavnega-spletnega-stre%C5%BEnika"><i class="fa fa-check"></i><b>8.1</b> Razvoj enostavnega spletnega strežnika</a>
+<ul style="display: none;">
+<li class="chapter" data-level="8.1.1" data-path="P4-V4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4-V4.html#hello-world"><i class="fa fa-check"></i><b>8.1.1</b> Hello World</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="P4-V4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4-V4.html#spremenljivke-na-stre%C5%BEniku"><i class="fa fa-check"></i><b>8.2</b> Spremenljivke na strežniku</a></li>
+<li class="chapter" data-level="8.3" data-path="P4-V4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4-V4.html#stre%C5%BEnik-stati%C4%8Dnih-spletnih-strani"><i class="fa fa-check"></i><b>8.3</b> Strežnik statičnih spletnih strani</a>
+<ul style="display: none;">
+<li class="chapter" data-level="8.3.1" data-path="P4-V4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4-V4.html#knji%C5%BEnice-ki-jih-bo-na%C5%A1-projekt-uporabljal"><i class="fa fa-check"></i><b>8.3.1</b> Knjižnice, ki jih bo naš projekt uporabljal</a></li>
+<li class="chapter" data-level="8.3.2" data-path="P4-V4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4-V4.html#uvoz-stati%C4%8Dnih-datotek"><i class="fa fa-check"></i><b>8.3.2</b> Uvoz statičnih datotek</a></li>
+<li class="chapter" data-level="8.3.3" data-path="P4-V4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4-V4.html#za%C4%8Dnemo-s-pisanjem-kode-na-stre%C5%BEniku"><i class="fa fa-check"></i><b>8.3.3</b> Začnemo s pisanjem kode na strežniku</a></li>
+<li class="chapter" data-level="8.3.4" data-path="P4-V4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4-V4.html#pripravimo-objekt-stre%C5%BEnika-in-ga-osnovno-nastavimo"><i class="fa fa-check"></i><b>8.3.4</b> Pripravimo objekt strežnika in ga osnovno nastavimo</a></li>
+<li class="chapter" data-level="8.3.5" data-path="P4-V4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4-V4.html#stre%C5%BEnik-po%C5%BEenemo"><i class="fa fa-check"></i><b>8.3.5</b> Strežnik poženemo</a></li>
+<li class="chapter" data-level="8.3.6" data-path="P4-V4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4-V4.html#pripravimo-%C5%A1e-manjkajo%C4%8Do-metodo-za-stre%C5%BEbo-stati%C4%8Dne-vsebine"><i class="fa fa-check"></i><b>8.3.6</b> Pripravimo še manjkajočo metodo za strežbo statične vsebine</a></li>
+<li class="chapter" data-level="8.3.7" data-path="P4-V4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4-V4.html#pripravimo-metodo-za-obvladovanje-napak"><i class="fa fa-check"></i><b>8.3.7</b> Pripravimo metodo za obvladovanje napak</a></li>
+<li class="chapter" data-level="8.3.8" data-path="P4-V4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4-V4.html#pripravimo-tudi-metodo-ki-vrne-datoteko-odjemalcu"><i class="fa fa-check"></i><b>8.3.8</b> Pripravimo tudi metodo, ki vrne datoteko odjemalcu</a></li>
+<li class="chapter" data-level="8.3.9" data-path="P4-V4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4-V4.html#preverimo-delovanje-stre%C5%BEbe-stati%C4%8Dnih-strani"><i class="fa fa-check"></i><b>8.3.9</b> Preverimo delovanje strežbe statičnih strani</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="P4-V4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4-V4.html#stre%C5%BEniku-stati%C4%8Dnih-strani-dodamo-predpomnjenje"><i class="fa fa-check"></i><b>8.4</b> Strežniku statičnih strani dodamo predpomnjenje</a></li>
+<li class="chapter" data-level="8.5" data-path="P4-V4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4-V4.html#stre%C5%BEniku-dodamo-dinami%C4%8Dne-strani"><i class="fa fa-check"></i><b>8.5</b> Strežniku dodamo dinamične strani</a>
+<ul style="display: none;">
+<li class="chapter" data-level="8.5.1" data-path="P4-V4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4-V4.html#popravimo-nastavitev-stre%C5%BEnika"><i class="fa fa-check"></i><b>8.5.1</b> Popravimo nastavitev strežnika</a></li>
+<li class="chapter" data-level="8.5.2" data-path="P4-V4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4-V4.html#implementiramo-metodo-za-obdelavo-sporo%C4%8Dila"><i class="fa fa-check"></i><b>8.5.2</b> Implementiramo metodo za obdelavo sporočila</a></li>
+<li class="chapter" data-level="8.5.3" data-path="P4-V4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4-V4.html#implementiramo-zahvalo-uporabniku"><i class="fa fa-check"></i><b>8.5.3</b> Implementiramo zahvalo uporabniku</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="P4-V4.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P4-V4.html#testiranje-in-dodatno-gradivo"><i class="fa fa-check"></i><b>8.6</b> Testiranje in dodatno gradivo</a></li>
+</ul></li>
+<li class="part"><span><b>II sklop: Arhitektura poslovnega informacijskega sistema</b></span></li>
+<li class="chapter" data-level="9" data-path="P5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5.html" title="9 P5 Metamodel delovnega sistema in arhitektura poslovnega informacijskega sistema"><i class="fa fa-check"></i><b>9</b> <span class="sklop2 oznaka">P5</span> Metamodel delovnega sistema in arhitektura poslovnega informacijskega sistema</a>
+<ul style="display: none;">
+<li class="chapter" data-level="9.1" data-path="P5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5.html#metamodel-delovnega-sistema"><i class="fa fa-check"></i><b>9.1</b> Metamodel delovnega sistema</a>
+<ul style="display: none;">
+<li class="chapter" data-level="9.1.1" data-path="P5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5.html#razmerje-med-informacijskim-sistemom-in-delovnim-sistemom"><i class="fa fa-check"></i><b>9.1.1</b> Razmerje med informacijskim sistemom in delovnim sistemom</a></li>
+<li class="chapter" data-level="9.1.2" data-path="P5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5.html#razli%C4%8Dni-pogledi-na-metamodel-delovnega-sistema"><i class="fa fa-check"></i><b>9.1.2</b> Različni pogledi na metamodel delovnega sistema</a></li>
+<li class="chapter" data-level="9.1.3" data-path="P5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5.html#primeri-metamodelov-delovnega-sistema"><i class="fa fa-check"></i><b>9.1.3</b> Primeri metamodelov delovnega sistema</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="P5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5.html#arhitektura-poslovnega-informacijskega-sistema"><i class="fa fa-check"></i><b>9.2</b> Arhitektura poslovnega informacijskega sistema</a>
+<ul style="display: none;">
+<li class="chapter" data-level="9.2.1" data-path="P5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5.html#uvod-v-poslovne-informacijske-sisteme"><i class="fa fa-check"></i><b>9.2.1</b> Uvod v poslovne informacijske sisteme</a></li>
+<li class="chapter" data-level="9.2.2" data-path="P5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5.html#poklici-povezani-s-poslovnimi-informacijskimi-sistemi"><i class="fa fa-check"></i><b>9.2.2</b> Poklici, povezani s poslovnimi informacijskimi sistemi</a></li>
+<li class="chapter" data-level="9.2.3" data-path="P5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5.html#razumevanje-poslovnih-procesov"><i class="fa fa-check"></i><b>9.2.3</b> Razumevanje poslovnih procesov</a></li>
+<li class="chapter" data-level="9.2.4" data-path="P5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5.html#poslovne-funkcije"><i class="fa fa-check"></i><b>9.2.4</b> Poslovne funkcije</a></li>
+<li class="chapter" data-level="9.2.5" data-path="P5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5.html#primeri-poslovnih-sistemov"><i class="fa fa-check"></i><b>9.2.5</b> Primeri poslovnih sistemov</a></li>
+<li class="chapter" data-level="9.2.6" data-path="P5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5.html#poslovni-sistemi-in-poslovne-funkcije"><i class="fa fa-check"></i><b>9.2.6</b> Poslovni sistemi in poslovne funkcije</a></li>
+<li class="chapter" data-level="9.2.7" data-path="P5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5.html#podjetja-in-poslovni-procesi"><i class="fa fa-check"></i><b>9.2.7</b> Podjetja in poslovni procesi</a></li>
+<li class="chapter" data-level="9.2.8" data-path="P5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5.html#primerjava-najve%C4%8Djih-ponudnikov"><i class="fa fa-check"></i><b>9.2.8</b> Primerjava največjih ponudnikov</a></li>
+<li class="chapter" data-level="9.2.9" data-path="P5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5.html#zgodovina-sistema-sap"><i class="fa fa-check"></i><b>9.2.9</b> Zgodovina sistema SAP</a></li>
+<li class="chapter" data-level="9.2.10" data-path="P5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5.html#komponente-poslovnih-informacijskih-sistemov"><i class="fa fa-check"></i><b>9.2.10</b> Komponente poslovnih informacijskih sistemov</a></li>
+<li class="chapter" data-level="9.2.11" data-path="P5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5.html#integracija-poslovnih-aplikacij"><i class="fa fa-check"></i><b>9.2.11</b> Integracija poslovnih aplikacij</a></li>
+<li class="chapter" data-level="9.2.12" data-path="P5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5.html#elektronska-izmenjava-podatkov"><i class="fa fa-check"></i><b>9.2.12</b> Elektronska izmenjava podatkov</a></li>
+<li class="chapter" data-level="9.2.13" data-path="P5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5.html#ERP-podrobnosti"><i class="fa fa-check"></i><b>9.2.13</b> ERP</a></li>
+<li class="chapter" data-level="9.2.14" data-path="P5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5.html#CRM-podrobnosti"><i class="fa fa-check"></i><b>9.2.14</b> CRM</a></li>
+<li class="chapter" data-level="9.2.15" data-path="P5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5.html#SCM-podrobnosti"><i class="fa fa-check"></i><b>9.2.15</b> SCM</a></li>
+<li class="chapter" data-level="9.2.16" data-path="P5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5.html#KM-podrobnosti"><i class="fa fa-check"></i><b>9.2.16</b> KM</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="P5-V5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html" title="10 P5 → V5 Povezovanje na podatkovno bazo"><i class="fa fa-check"></i><b>10</b> <span class="sklop2 oznaka">P5</span> → <span class="sklop3 oznaka">V5</span> Povezovanje na podatkovno bazo</a>
+<ul style="display: none;">
+<li class="chapter" data-level="10.1" data-path="P5-V5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html#priprava-okolja"><i class="fa fa-check"></i><b>10.1</b> Priprava okolja</a></li>
+<li class="chapter" data-level="10.2" data-path="P5-V5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html#raz%C5%A1iritev-arhitekture-odjemalecstre%C5%BEnik-s-podatkovno-bazo"><i class="fa fa-check"></i><b>10.2</b> Razširitev arhitekture odjemalec/strežnik s podatkovno bazo</a></li>
+<li class="chapter" data-level="10.3" data-path="P5-V5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html#chinook-podatkovna-baza"><i class="fa fa-check"></i><b>10.3</b> Chinook podatkovna baza</a></li>
+<li class="chapter" data-level="10.4" data-path="P5-V5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html#poizvedovalni-jezik-sql"><i class="fa fa-check"></i><b>10.4</b> Poizvedovalni jezik SQL</a></li>
+<li class="chapter" data-level="10.5" data-path="P5-V5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html#podatkovna-baza-sqlite"><i class="fa fa-check"></i><b>10.5</b> Podatkovna baza SQLite</a>
+<ul style="display: none;">
+<li class="chapter" data-level="10.5.1" data-path="P5-V5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html#vsebina-podatkovne-baze"><i class="fa fa-check"></i><b>10.5.1</b> Vsebina podatkovne baze</a></li>
+<li class="chapter" data-level="10.5.2" data-path="P5-V5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html#namestitev-knji%C5%BEnic"><i class="fa fa-check"></i><b>10.5.2</b> Namestitev knjižnic</a></li>
+<li class="chapter" data-level="10.5.3" data-path="P5-V5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html#prikaz-vseh-vrednosti-v-tabeli"><i class="fa fa-check"></i><b>10.5.3</b> Prikaz vseh vrednosti v tabeli</a></li>
+<li class="chapter" data-level="10.5.4" data-path="P5-V5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html#filtriranje-zapisov"><i class="fa fa-check"></i><b>10.5.4</b> Filtriranje zapisov</a></li>
+<li class="chapter" data-level="10.5.5" data-path="P5-V5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html#prikaz-podatkov-iz-ve%C4%8D-tabel"><i class="fa fa-check"></i><b>10.5.5</b> Prikaz podatkov iz več tabel</a></li>
+</ul></li>
+<li class="chapter" data-level="10.6" data-path="P5-V5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html#uporaba-ogrodja-express.js-za-poenostavitev-razvoja-aplikacij"><i class="fa fa-check"></i><b>10.6</b> Uporaba ogrodja Express.js za poenostavitev razvoja aplikacij</a>
+<ul style="display: none;">
+<li class="chapter" data-level="10.6.1" data-path="P5-V5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html#namestitev-knji%C5%BEnic-1"><i class="fa fa-check"></i><b>10.6.1</b> Namestitev knjižnic</a></li>
+<li class="chapter" data-level="10.6.2" data-path="P5-V5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html#hello-world-brez-uporabe-express"><i class="fa fa-check"></i><b>10.6.2</b> Hello World brez uporabe Express</a></li>
+<li class="chapter" data-level="10.6.3" data-path="P5-V5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html#hello-world-z-express"><i class="fa fa-check"></i><b>10.6.3</b> Hello World z Express</a></li>
+</ul></li>
+<li class="chapter" data-level="10.7" data-path="P5-V5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html#master-detail-na%C4%8Drtovalski-vzorec"><i class="fa fa-check"></i><b>10.7</b> Master-detail načrtovalski vzorec</a></li>
+<li class="chapter" data-level="10.8" data-path="P5-V5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html#primer-pesmi-po-%C5%BEanrih"><i class="fa fa-check"></i><b>10.8</b> Primer: Pesmi po žanrih</a>
+<ul style="display: none;">
+<li class="chapter" data-level="10.8.1" data-path="P5-V5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html#potrebne-knji%C5%BEnice"><i class="fa fa-check"></i><b>10.8.1</b> Potrebne knjižnice</a></li>
+<li class="chapter" data-level="10.8.2" data-path="P5-V5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html#funkcija-ki-v-povratnem-klicu-vra%C4%8Da-seznam-%C5%BEanrov"><i class="fa fa-check"></i><b>10.8.2</b> Funkcija, ki v povratnem klicu vrača seznam žanrov</a></li>
+<li class="chapter" data-level="10.8.3" data-path="P5-V5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html#zaklju%C4%8Dek-osnovne-funkcionalnosti-stre%C5%BEnika"><i class="fa fa-check"></i><b>10.8.3</b> Zaključek osnovne funkcionalnosti strežnika</a></li>
+<li class="chapter" data-level="10.8.4" data-path="P5-V5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html#testiranje-osnovne-funkcionalnosti-master"><i class="fa fa-check"></i><b>10.8.4</b> Testiranje osnovne funkcionalnosti (master)</a></li>
+<li class="chapter" data-level="10.8.5" data-path="P5-V5.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html#dodajanje-seznama-pesmi-detail"><i class="fa fa-check"></i><b>10.8.5</b> Dodajanje seznama pesmi (detail)</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="DN.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html"><i class="fa fa-check"></i><b>11</b> <span class="sklop3 oznaka">DN</span> Spletna aplikacija FRI izletnik</a>
+<ul style="">
+<li class="chapter active" data-level="11.1" data-path="DN.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN1"><i class="fa fa-check"></i><b>11.1</b> Spletna aplikacija <small>(1. del)</small></a>
+<ul style="display: none;">
+<li class="chapter" data-level="11.1.1" data-path="DN.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#opis-naloge-in-navodila"><i class="fa fa-check"></i><b>11.1.1</b> Opis naloge in navodila <i class="skrivanje fa-solid fa-circle-exclamation"></i></a></li>
+<li class="chapter" data-level="11.1.2" data-path="DN.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#vzpostavitev-repozitorija"><i class="fa fa-check"></i><b>11.1.2</b> Vzpostavitev repozitorija <i class="skrivanje fa-solid fa-circle-exclamation"></i></a></li>
+<li class="chapter" data-level="11.1.3" data-path="DN.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN11"><i class="fa fa-check"></i><b>11.1.3</b> Skladnja strani in stilska preobrazba <i class="skrivanje fa-solid fa-circle-exclamation"></i></a></li>
+<li class="chapter" data-level="11.1.4" data-path="DN.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN12"><i class="fa fa-check"></i><b>11.1.4</b> Podpora funkcionalnosti na odjemalcu in strežniku <i class="skrivanje fa-solid fa-circle-exclamation"></i></a></li>
+<li class="chapter" data-level="11.1.5" data-path="DN.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#zdru%C5%BEevanje-sprememb-v-repozitoriju"><i class="fa fa-check"></i><b>11.1.5</b> Združevanje sprememb v repozitoriju <i class="skrivanje fa-solid fa-circle-exclamation"></i></a></li>
+</ul></li>
+<li class="chapter" data-level="11.2" data-path="DN.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN2" title="11.2 Dopolnitev načrta in implementacija nove funkcionalnosti (2. del)"><i class="fa fa-check"></i><b>11.2</b> Dopolnitev načrta in implementacija nove funkcionalnosti <small>(2. del)</small></a>
+<ul style="display: none;">
+<li class="chapter" data-level="11.2.1" data-path="DN.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN-navodila"><i class="fa fa-check"></i><b>11.2.1</b> Opis naloge in navodila <i class="skrivanje fa-solid fa-circle-exclamation"></i></a></li>
+<li class="chapter" data-level="11.2.2" data-path="DN.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN-ideja"><i class="fa fa-check"></i><b>11.2.2</b> Opis osnovne ideje predloga <i class="skrivanje fa-solid fa-circle-exclamation"></i></a></li>
+<li class="chapter" data-level="11.2.3" data-path="DN.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN-Generiranje-podatkov"><i class="fa fa-check"></i><b>11.2.3</b> Generiranje podatkov <i class="skrivanje fa-solid fa-circle-exclamation"></i></a></li>
+<li class="chapter" data-level="11.2.4" data-path="DN.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN-nacrt"><i class="fa fa-check"></i><b>11.2.4</b> Načrt informacijske rešitve <i class="skrivanje fa-solid fa-circle-exclamation"></i></a></li>
+<li class="chapter" data-level="11.2.5" data-path="DN.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN-implementacija"><i class="fa fa-check"></i><b>11.2.5</b> Implementacija funkcionalnosti <i class="skrivanje fa-solid fa-circle-exclamation"></i></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="P6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6.html" title="12 P6 Zgodovina, ključne vloge in vrste IS"><i class="fa fa-check"></i><b>12</b> <span class="sklop2 oznaka">P6</span> Zgodovina, ključne vloge in vrste IS</a>
+<ul style="display: none;">
+<li class="chapter" data-level="12.1" data-path="P6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6.html#e-poslovanje"><i class="fa fa-check"></i><b>12.1</b> E-poslovanje</a></li>
+<li class="chapter" data-level="12.2" data-path="P6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6.html#e-trgovanje"><i class="fa fa-check"></i><b>12.2</b> E-trgovanje</a>
+<ul style="display: none;">
+<li class="chapter" data-level="12.2.1" data-path="P6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6.html#zgodovina-e-trgovanja"><i class="fa fa-check"></i><b>12.2.1</b> Zgodovina e-trgovanja</a></li>
+<li class="chapter" data-level="12.2.2" data-path="P6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6.html#tehnologije-e-trgovanja"><i class="fa fa-check"></i><b>12.2.2</b> Tehnologije e-trgovanja</a></li>
+<li class="chapter" data-level="12.2.3" data-path="P6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6.html#osnovne-komponente-e-trgovanja"><i class="fa fa-check"></i><b>12.2.3</b> Osnovne komponente e-trgovanja</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="P6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6.html#zgodovina-in-klju%C4%8Dne-vloge-is"><i class="fa fa-check"></i><b>12.3</b> Zgodovina in ključne vloge IS</a>
+<ul style="display: none;">
+<li class="chapter" data-level="12.3.1" data-path="P6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6.html#zgodovinski-pregled-pomembnih-dogodkov-v-ra%C4%8Dunalni%C5%A1tvu"><i class="fa fa-check"></i><b>12.3.1</b> Zgodovinski pregled pomembnih dogodkov v računalništvu</a></li>
+<li class="chapter" data-level="12.3.2" data-path="P6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6.html#razvoj-tehnologij"><i class="fa fa-check"></i><b>12.3.2</b> Razvoj tehnologij</a></li>
+<li class="chapter" data-level="12.3.3" data-path="P6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6.html#razvoj-it-za-podporo-is"><i class="fa fa-check"></i><b>12.3.3</b> Razvoj IT za podporo IS</a></li>
+<li class="chapter" data-level="12.3.4" data-path="P6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6.html#razvoj-informacijske-podpore-po-ravneh-odlo%C4%8Danja"><i class="fa fa-check"></i><b>12.3.4</b> Razvoj informacijske podpore po ravneh odločanja</a></li>
+<li class="chapter" data-level="12.3.5" data-path="P6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6.html#zgodovina-informacijskih-sistemov"><i class="fa fa-check"></i><b>12.3.5</b> Zgodovina informacijskih sistemov</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="P6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6.html#vrste-informacijskih-sistemov"><i class="fa fa-check"></i><b>12.4</b> Vrste informacijskih sistemov</a>
+<ul style="display: none;">
+<li class="chapter" data-level="12.4.1" data-path="P6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6.html#sistemi-za-podporo-poslovanju"><i class="fa fa-check"></i><b>12.4.1</b> Sistemi za podporo poslovanju</a></li>
+<li class="chapter" data-level="12.4.2" data-path="P6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6.html#sistemi-za-podporo-odlo%C4%8Danju"><i class="fa fa-check"></i><b>12.4.2</b> Sistemi za podporo odločanju</a></li>
+<li class="chapter" data-level="12.4.3" data-path="P6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6.html#specializirani-sistemi"><i class="fa fa-check"></i><b>12.4.3</b> Specializirani sistemi</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="P6-V6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6-V6.html" title="13 P6 → V6 Seja, košarica, XML in e-SLOG"><i class="fa fa-check"></i><b>13</b> <span class="sklop2 oznaka">P6</span> → <span class="sklop3 oznaka">V6</span> Seja, košarica, XML in e-SLOG</a>
+<ul style="display: none;">
+<li class="chapter" data-level="13.1" data-path="P6-V6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6-V6.html#priprava-okolja-1"><i class="fa fa-check"></i><b>13.1</b> Priprava okolja</a></li>
+<li class="chapter" data-level="13.2" data-path="P6-V6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6-V6.html#namestitev-knji%C5%BEnic-in-vklju%C4%8Ditev-podatkovne-baze"><i class="fa fa-check"></i><b>13.2</b> Namestitev knjižnic in vključitev podatkovne baze</a></li>
+<li class="chapter" data-level="13.3" data-path="P6-V6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6-V6.html#seja"><i class="fa fa-check"></i><b>13.3</b> Seja</a>
+<ul style="display: none;">
+<li class="chapter" data-level="13.3.1" data-path="P6-V6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6-V6.html#globalne-spremenljivke-vs.-seja"><i class="fa fa-check"></i><b>13.3.1</b> Globalne spremenljivke vs.&nbsp;seja</a></li>
+</ul></li>
+<li class="chapter" data-level="13.4" data-path="P6-V6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6-V6.html#nakupovalna-ko%C5%A1arica"><i class="fa fa-check"></i><b>13.4</b> Nakupovalna košarica</a>
+<ul style="display: none;">
+<li class="chapter" data-level="13.4.1" data-path="P6-V6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6-V6.html#primer-nakupovanja-pesmi-iz-seznama-100-najbolje-prodajanih"><i class="fa fa-check"></i><b>13.4.1</b> Primer nakupovanja pesmi iz seznama 100 najbolje prodajanih</a></li>
+</ul></li>
+<li class="chapter" data-level="13.5" data-path="P6-V6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6-V6.html#xml-in-e-slog"><i class="fa fa-check"></i><b>13.5</b> XML in e-SLOG</a>
+<ul style="display: none;">
+<li class="chapter" data-level="13.5.1" data-path="P6-V6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6-V6.html#dokumentacija"><i class="fa fa-check"></i><b>13.5.1</b> Dokumentacija</a></li>
+<li class="chapter" data-level="13.5.2" data-path="P6-V6.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P6-V6.html#dopolnitve-primera-nakupovanja-pesmi"><i class="fa fa-check"></i><b>13.5.2</b> Dopolnitve primera nakupovanja pesmi</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>III sklop: Analiza, načrtovanje in razvoj poslovnih informacijskih sistemov</b></span></li>
+<li class="chapter" data-level="14" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html" title="14 P7 Razvojni modeli informacijskih sistemov in metodologije razvoja"><i class="fa fa-check"></i><b>14</b> <span class="sklop3 oznaka">P7</span> Razvojni modeli informacijskih sistemov in metodologije razvoja</a>
+<ul style="display: none;">
+<li class="chapter" data-level="14.1" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#zgodovina-razvoja-informacijskih-sistemov"><i class="fa fa-check"></i><b>14.1</b> Zgodovina razvoja informacijskih sistemov</a></li>
+<li class="chapter" data-level="14.2" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#razvojni-model-informacijskega-sistema"><i class="fa fa-check"></i><b>14.2</b> Razvojni model informacijskega sistema</a>
+<ul style="display: none;">
+<li class="chapter" data-level="14.2.1" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#SDLC-studija-izvedljivosti"><i class="fa fa-check"></i><b>14.2.1</b> Študija izvedljivosti</a></li>
+<li class="chapter" data-level="14.2.2" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#SDLC-zbiranje-zahtev"><i class="fa fa-check"></i><b>14.2.2</b> Zbiranje zahtev</a></li>
+<li class="chapter" data-level="14.2.3" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#SDLC-analiza"><i class="fa fa-check"></i><b>14.2.3</b> Analiza</a></li>
+<li class="chapter" data-level="14.2.4" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#SDLC-nacrt"><i class="fa fa-check"></i><b>14.2.4</b> Načrtovanje</a></li>
+<li class="chapter" data-level="14.2.5" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#SDLC-implementacija"><i class="fa fa-check"></i><b>14.2.5</b> Implementacija</a></li>
+<li class="chapter" data-level="14.2.6" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#SDLC-pregled-in-vzdrzevanje"><i class="fa fa-check"></i><b>14.2.6</b> Pregled in vzdrževanje</a></li>
+</ul></li>
+<li class="chapter" data-level="14.3" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#metodologija"><i class="fa fa-check"></i><b>14.3</b> Metodologija</a>
+<ul style="display: none;">
+<li class="chapter" data-level="14.3.1" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#tehnike"><i class="fa fa-check"></i><b>14.3.1</b> Tehnike</a></li>
+<li class="chapter" data-level="14.3.2" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#orodja"><i class="fa fa-check"></i><b>14.3.2</b> Orodja</a></li>
+</ul></li>
+<li class="chapter" data-level="14.4" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#variante-razvojnih-modelov-informacijskih-sistemov"><i class="fa fa-check"></i><b>14.4</b> Variante razvojnih modelov informacijskih sistemov</a>
+<ul style="display: none;">
+<li class="chapter" data-level="14.4.1" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#Zaporedni-razvojni-model"><i class="fa fa-check"></i><b>14.4.1</b> Zaporedni oz. slapovni razvojni model</a></li>
+<li class="chapter" data-level="14.4.2" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#Iterativni-razvojni-model"><i class="fa fa-check"></i><b>14.4.2</b> Iterativni razvojni model</a></li>
+<li class="chapter" data-level="14.4.3" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#Prototipni-razvojni-model"><i class="fa fa-check"></i><b>14.4.3</b> Prototipni razvojni model</a></li>
+<li class="chapter" data-level="14.4.4" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#Iterativni-prototipni-razvojni-model"><i class="fa fa-check"></i><b>14.4.4</b> Iterativni/prototipni razvojni model</a></li>
+<li class="chapter" data-level="14.4.5" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#Inkrementalni-razvojni-model"><i class="fa fa-check"></i><b>14.4.5</b> Inkrementalni razvojni model</a></li>
+<li class="chapter" data-level="14.4.6" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#iterativnost-vs.-inkrementalnost"><i class="fa fa-check"></i><b>14.4.6</b> Iterativnost vs.&nbsp;inkrementalnost</a></li>
+<li class="chapter" data-level="14.4.7" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#Kombinirani-razvojni-model"><i class="fa fa-check"></i><b>14.4.7</b> Kombinirani razvojni model</a></li>
+</ul></li>
+<li class="chapter" data-level="14.5" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#metodologije-razvoja"><i class="fa fa-check"></i><b>14.5</b> Metodologije razvoja</a>
+<ul style="display: none;">
+<li class="chapter" data-level="14.5.1" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#razli%C4%8Dne-opredelitve-v-literaturi"><i class="fa fa-check"></i><b>14.5.1</b> Različne opredelitve v literaturi</a></li>
+<li class="chapter" data-level="14.5.2" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#metodologija-v-terminolo%C5%A1kem-slovarju"><i class="fa fa-check"></i><b>14.5.2</b> Metodologija v terminološkem slovarju</a></li>
+<li class="chapter" data-level="14.5.3" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#na%C5%A1a-opredelitev"><i class="fa fa-check"></i><b>14.5.3</b> Naša opredelitev</a></li>
+<li class="chapter" data-level="14.5.4" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#elementi-metodologije"><i class="fa fa-check"></i><b>14.5.4</b> Elementi metodologije</a></li>
+<li class="chapter" data-level="14.5.5" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#upravljanje-z-znanjem"><i class="fa fa-check"></i><b>14.5.5</b> Upravljanje z znanjem</a></li>
+<li class="chapter" data-level="14.5.6" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#formalna-vs.-neformalna-metodologija"><i class="fa fa-check"></i><b>14.5.6</b> Formalna vs.&nbsp;neformalna metodologija</a></li>
+<li class="chapter" data-level="14.5.7" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#agilni-koncepti-in-metodologije"><i class="fa fa-check"></i><b>14.5.7</b> Agilni koncepti in metodologije</a></li>
+<li class="chapter" data-level="14.5.8" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#metamodel-metodologije-razvoja-informacijskega-sistema"><i class="fa fa-check"></i><b>14.5.8</b> Metamodel metodologije razvoja informacijskega sistema</a></li>
+<li class="chapter" data-level="14.5.9" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#ogrodja-za-primerjavo-metodologij"><i class="fa fa-check"></i><b>14.5.9</b> Ogrodja za primerjavo metodologij</a></li>
+<li class="chapter" data-level="14.5.10" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#u%C4%8Dinkovitost-razli%C4%8Dnih-oblik-komunikacije"><i class="fa fa-check"></i><b>14.5.10</b> Učinkovitost različnih oblik komunikacije</a></li>
+<li class="chapter" data-level="14.5.11" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#vpliv-velikosti-na-posebnosti-razvojne-skupine"><i class="fa fa-check"></i><b>14.5.11</b> Vpliv velikosti na posebnosti razvojne skupine</a></li>
+<li class="chapter" data-level="14.5.12" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#Kriticni-projekti"><i class="fa fa-check"></i><b>14.5.12</b> Kritični projekti</a></li>
+<li class="chapter" data-level="14.5.13" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#Komunikacija-in-povratne-informacije"><i class="fa fa-check"></i><b>14.5.13</b> Komunikacija in povratne informacije</a></li>
+<li class="chapter" data-level="14.5.14" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#primer-google-in%C5%BEenirji-vs.-managerji"><i class="fa fa-check"></i><b>14.5.14</b> Primer: Google: Inženirji vs.&nbsp;managerji</a></li>
+<li class="chapter" data-level="14.5.15" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#Discipliniranost-izkusnje-in-znanje"><i class="fa fa-check"></i><b>14.5.15</b> Discipliniranost, izkušnje in znanje</a></li>
+<li class="chapter" data-level="14.5.16" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#Odkloni-od-nacrtovane-resitve"><i class="fa fa-check"></i><b>14.5.16</b> Odkloni od načrtovane rešitve</a></li>
+<li class="chapter" data-level="14.5.17" data-path="P7.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P7.html#evolucija-razvoja-programske-opreme"><i class="fa fa-check"></i><b>14.5.17</b> Evolucija razvoja programske opreme</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="P8.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P8.html"><i class="fa fa-check"></i><b>15</b> <span class="sklop3 oznaka">P8</span> Strukturni razvoj</a>
+<ul style="display: none;">
+<li class="chapter" data-level="15.1" data-path="P8.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P8.html#uvod-v-strukturni-razvoj"><i class="fa fa-check"></i><b>15.1</b> Uvod v strukturni razvoj</a>
+<ul style="display: none;">
+<li class="chapter" data-level="15.1.1" data-path="P8.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P8.html#Strukturni-zajem-in-specifikaija-zahtev"><i class="fa fa-check"></i><b>15.1.1</b> Zajem in specifikacija zahtev</a></li>
+<li class="chapter" data-level="15.1.2" data-path="P8.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P8.html#Strukturni-analiza"><i class="fa fa-check"></i><b>15.1.2</b> Analiza</a></li>
+<li class="chapter" data-level="15.1.3" data-path="P8.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P8.html#Strukturni-nacrtovanje"><i class="fa fa-check"></i><b>15.1.3</b> Načrtovanje</a></li>
+<li class="chapter" data-level="15.1.4" data-path="P8.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P8.html#Strukturni-testiranje"><i class="fa fa-check"></i><b>15.1.4</b> Testiranje</a></li>
+<li class="chapter" data-level="15.1.5" data-path="P8.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P8.html#Strukturni-namestitev-in-uvedba"><i class="fa fa-check"></i><b>15.1.5</b> Namestitev in uvedba</a></li>
+</ul></li>
+<li class="chapter" data-level="15.2" data-path="P8.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P8.html#podatkovno-na%C4%8Drtovanje"><i class="fa fa-check"></i><b>15.2</b> Podatkovno načrtovanje</a>
+<ul style="display: none;">
+<li class="chapter" data-level="15.2.1" data-path="P8.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P8.html#relacijski-model"><i class="fa fa-check"></i><b>15.2.1</b> Relacijski model</a></li>
+<li class="chapter" data-level="15.2.2" data-path="P8.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P8.html#matemati%C4%8Dna-opredelitev"><i class="fa fa-check"></i><b>15.2.2</b> Matematična opredelitev</a></li>
+<li class="chapter" data-level="15.2.3" data-path="P8.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P8.html#entitetni-diagram"><i class="fa fa-check"></i><b>15.2.3</b> Entitetni diagram</a></li>
+<li class="chapter" data-level="15.2.4" data-path="P8.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P8.html#razli%C4%8Dne-ravni-podatkovnega-modeliranja"><i class="fa fa-check"></i><b>15.2.4</b> Različne ravni podatkovnega modeliranja</a></li>
+<li class="chapter" data-level="15.2.5" data-path="P8.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P8.html#Postopek-konceptualno-nacrtovanje"><i class="fa fa-check"></i><b>15.2.5</b> Konceptualno načrtovanje</a></li>
+<li class="chapter" data-level="15.2.6" data-path="P8.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P8.html#prehod-iz-konceptualnega-v-logi%C4%8Dno-na%C4%8Drtovanje"><i class="fa fa-check"></i><b>15.2.6</b> Prehod iz konceptualnega v logično načrtovanje</a></li>
+<li class="chapter" data-level="15.2.7" data-path="P8.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P8.html#logi%C4%8Dno-na%C4%8Drtovanje"><i class="fa fa-check"></i><b>15.2.7</b> Logično načrtovanje</a></li>
+</ul></li>
+<li class="chapter" data-level="15.3" data-path="P8.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P8.html#Postopek-normalizacija"><i class="fa fa-check"></i><b>15.3</b> Normalizacija</a>
+<ul style="display: none;">
+<li class="chapter" data-level="15.3.1" data-path="P8.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P8.html#normalna-oblika-1.-no"><i class="fa fa-check"></i><b>15.3.1</b> 1. normalna oblika (1. NO)</a></li>
+<li class="chapter" data-level="15.3.2" data-path="P8.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P8.html#normalna-oblika-2.-no"><i class="fa fa-check"></i><b>15.3.2</b> 2. normalna oblika (2. NO)</a></li>
+<li class="chapter" data-level="15.3.3" data-path="P8.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P8.html#normalna-oblika-3.-no"><i class="fa fa-check"></i><b>15.3.3</b> 3. normalna oblika (3. NO)</a></li>
+<li class="chapter" data-level="15.3.4" data-path="P8.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P8.html#poslovna-normalna-oblika-4.-pno"><i class="fa fa-check"></i><b>15.3.4</b> 4. poslovna normalna oblika (4. PNO)</a></li>
+<li class="chapter" data-level="15.3.5" data-path="P8.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P8.html#poslovna-normalna-oblika-5.-pno"><i class="fa fa-check"></i><b>15.3.5</b> 5. poslovna normalna oblika (5. PNO)</a></li>
+</ul></li>
+<li class="chapter" data-level="15.4" data-path="P8.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/P8.html#denormalizacija"><i class="fa fa-check"></i><b>15.4</b> Denormalizacija</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="literatura.html"><a href="https://teaching.lavbic.net/OIS/2022-2023/literatura.html"><i class="fa fa-check"></i>Literatura</a></li>
+<li class="divider"></li>
+<li><a href="https://ucilnica.fri.uni-lj.si/course/view.php?id=54">eUčilnica</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body fixed">
+      <div class="body-inner">
+        <div class="book-header fixed" role="navigation" style="background-color: rgb(255, 255, 255);">
+          <a class="btn pull-left js-toolbar-action" aria-label="Toggle Sidebar" title="Toggle Sidebar" href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#"><i class="fa fa-align-justify"></i></a><a class="btn pull-left js-toolbar-action" aria-label="Search" title="Search" href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#"><i class="fa fa-search"></i></a><div class="dropdown pull-left font-settings js-toolbar-action"><a class="btn toggle-dropdown" aria-label="Font Settings" title="Font Settings" href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#"><i class="fa fa-font"></i></a><div class="dropdown-menu dropdown-right"><div class="dropdown-caret"><span class="caret-outer"></span><span class="caret-inner"></span></div><div class="buttons"><button class="button size-2 font-reduce">A</button><button class="button size-2 font-enlarge">A</button></div><div class="buttons"><button class="button size-2 ">Serif</button><button class="button size-2 ">Sans</button></div><div class="buttons"><button class="button size-3 ">White</button><button class="button size-3 ">Sepia</button><button class="button size-3 ">Night</button></div></div></div><a class="btn pull-left js-toolbar-action" aria-label="Information about the toolbar" title="Information about the toolbar" href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#"><i class="fa fa-info"></i></a><h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="https://teaching.lavbic.net/OIS/2022-2023/">Osnove informacijskih sistemov 2022/2023</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="DN" class="section level1" number="11">
+<h1 class="hasAnchor"><span class="header-section-number">Poglavje 11</span> <span class="sklop3 oznaka">DN</span> Spletna aplikacija FRI izletnik<a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="vrstica">
+<img src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/ninja_02_shuriken_attack_right.png">
+<h3>
+<span class="sklop3 oznaka">DN</span>
+</h3>
+</div>
+<div id="DN1" class="section level2" number="11.1">
+<h2 class="hasAnchor"><span class="header-section-number">11.1</span> Spletna aplikacija <small>(1. del)</small><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="opis-naloge-in-navodila" class="section level3" number="11.1.1">
+<h3 class="hasAnchor"><span class="header-section-number">11.1.1</span> Opis naloge in navodila <i class="skrivanje fa-solid fa-circle-exclamation"></i><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#opis-naloge-in-navodila" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div>
+
+<p>V GitHub repozitoriju <i class="fa-brands fa-github"></i><strong><code>DN-{študent}</code></strong>, v okviru organizacije našega predmeta <a href="https://github.com/ois-2022-2023"><i class="fa-solid fa-earth-europe"></i><code>ois-2022-2023</code></a>, kjer <code>{študent}</code> predstavlja GitHub uporabniško ime posameznega študenta, je na voljo podobna Node.js spletna prodajalna, kot jo bomo spoznali na vajah <span class="sklop3">V6</span> <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#V6">Spletna trgovina e-Pesmi</a>, za razliko, da se spletna trgovina nanaša na domeno <strong>turističnih destinacij</strong>, in sicer turističnih atrakcij, živalskih vrtov in hostlov, kjer je shema podatkovne baze predstavljena na sliki <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#fig:slika-DN-DestinationInvoice-shema">11.1</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:slika-DN-DestinationInvoice-shema"></span>
+<img src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/nLJ1RkCW4Btp5QYzHVAnKXLLbJPkiXjjrStkPhLdQfDu50mMa6sZfl--G023xPvxiVpUu9atZ_6e0_2EIDBYYX6by" alt="**Shema podatkovne baze** problemske domene v okviru DN" width="500">
+<p class="caption">
+Slika 11.1: <strong>Shema podatkovne baze</strong> problemske domene v okviru DN
+</p>
+</div>
+<p>V okviru domače naloge dopolnite obstoječo implementacijo spletne prodajalne, kot zahtevajo navodila. Domača naloga zahteva poznavanje večnivojske arhitekture informacijskega sistema, s tehnološkega vidika pa ukazov git, označb HTML, stilov CSS, jezika JavaScript, Node.js tehnologije z izbranimi knjižnicami in XML zapis podatkov. Pri delu <strong>natančno sledite navodilom</strong> in poskrbite, da bodo <strong>vse obstoječe funkcionalnosti delovale</strong> tudi po implementaciji vaših nalog!</p>
+<blockquote>
+<p><strong>Opozorilo</strong>: Vse oddane domače naloge (1. del) bodo pregledane z vidika medsebojne vsebinske podobnosti in v primeru suma prepisovanja bodo izbrani študenti (poleg nekaj naključno izbranih) pozvani na dodatni zagovor domače naloge. Pri ugotavljanju prvotnega avtorstva oddane rešitve se upošteva prva oddana rešitev študenta (glede na čas uveljavitve na GitHub-u).</p>
+</blockquote>
+<blockquote>
+<p><strong><i class="fa-solid fa-file-arrow-up"></i>Kako naj oddam nalogo?</strong></p>
+</blockquote>
+<div class="navodilaZaOddajo">
+<p>Spletno povezavo na GitHub repozitorij oddate v obliki <code>https://github.com/ois-2022-2023/DN-{študent}</code>, kjer <em>{študent}</em> predstavlja vaše GitHub uporabniško ime. To spletno povezavo oddate le kot odgovor na <a href="https://ucilnica.fri.uni-lj.si/mod/assign/view.php?id=52057"><i class="fa-regular fa-pen-to-square"></i>nalogo na spletni učilnici</a>.</p>
+<p>Vsako nalogo boste izdelali v svoji veji razvoja, spremembe smiselno uveljavljali in vse uveljavitve tudi prenesli v oddaljeni repozitorij v istoležne veje. Na koncu boste vse veje ustrezno združili v vejo <i class="fa-solid fa-code-branch"></i><code>main</code>. <strong>Vej po združevanju ne brišite!</strong></p>
+<p><strong>Bodite pozorni, da natančno upoštevate navodila, saj bodo oddaje avtomatsko preverjene (zadnje uveljavitve v vejah <i class="fa-solid fa-code-branch"></i><code>stilizacija</code>, <i class="fa-solid fa-code-branch"></i><code>funkcionalnosti</code> in <i class="fa-solid fa-code-branch"></i><code>main</code>) in zaradi nepravilne oddaje posledično ne boste dobili točk.</strong></p>
+<blockquote>
+<p><strong>Opozorilo</strong>: Število uveljavitev ne vpliva na končno oceno, je pa zahtevano, da v okviru vsake naloge izvedete <strong>vsaj 2 uveljavitvi</strong> (začetno in končno), kot je to podrobneje predstavljeno v naslednjem odstavku. V okviru posamezne naloge (v vsaki veji razvoja) se bo namreč preverjalo, kaj ste implementirali med prvo in zadnjo uveljavitvijo.</p>
+</blockquote>
+</div>
+</div>
+<div id="vzpostavitev-repozitorija" class="section level3" number="11.1.2">
+<h3 class="hasAnchor"><span class="header-section-number">11.1.2</span> Vzpostavitev repozitorija <i class="skrivanje fa-solid fa-circle-exclamation"></i><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#vzpostavitev-repozitorija" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div>
+<p>Na GitHub-u, v okviru organizacije našega predmeta <a href="https://github.com/ois-2022-2023"><i class="fa-solid fa-earth-europe"></i><code>ois-2022-2023</code></a>, dostopajte do začetne verzije vašega repozitorija <i class="fa-brands fa-github"></i><strong><code>DN-{študent}</code></strong>, kjer <code>{študent}</code> predstavlja vaše GitHub uporabniško ime.</p>
+<p>Z uporabo podanih <em>git</em> ukazov v ukazni lupini lokalnega razvojnega okolja vzpostavite lokalni repozitorij, dodajte datoteko <i class="fa-regular fa-file-code"></i><code>DestinationInvoice.sl3</code> v <i class="fa-regular fa-file-code"></i><code>.gitignore</code> (spremembe v podatkovni bazi ne boste posredovali v GitHub repozitorij) in ustvarite veje razvoja <i class="fa-solid fa-code-branch"></i><code>stilizacija</code> in <i class="fa-solid fa-code-branch"></i><code>funkcionalnosti</code>, v okviru katerih boste reševali posamezne naloge.</p>
+<blockquote>
+<p><strong><i class="fa-solid fa-file-arrow-up"></i>Ukazi, s katerimi pričnete reševanje:</strong></p>
+</blockquote>
+<div class="sourceCode" id="cb125"><button type="button" class="copy-to-clipboard-button" title="Copy to clipboard" aria-label="Copy to clipboard"><i class="fa fa-copy"></i></button><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb125-1"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#cb125-1" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/ois-2022-2023/DN-{študent}.git</span>
+<span id="cb125-2"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#cb125-2" tabindex="-1"></a><span class="bu">cd</span> DN-{študent}</span>
+<span id="cb125-3"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#cb125-3" tabindex="-1"></a><span class="ex">npm</span> install</span></code></pre></div>
+<p>Uporabniki operacijskih sistemov <strong><em>Linux</em></strong> ali <strong><em>Mac OS</em></strong> zaženite sledeč ukaz:</p>
+<div class="sourceCode" id="cb126"><button type="button" class="copy-to-clipboard-button" title="Copy to clipboard" aria-label="Copy to clipboard"><i class="fa fa-copy"></i></button><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb126-1"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#cb126-1" tabindex="-1"></a><span class="bu">echo</span> <span class="at">-e</span> <span class="st">"\nDestinationInvoice.sl3"</span> <span class="op">&amp;&gt;&gt;</span> .gitignore</span></code></pre></div>
+<p>Uporabniki operacijskih sistemov <strong><em>Microsoft Windows</em></strong> zaženite sledeč ukaz:</p>
+<div class="sourceCode" id="cb127"><button type="button" class="copy-to-clipboard-button" title="Copy to clipboard" aria-label="Copy to clipboard"><i class="fa fa-copy"></i></button><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb127-1"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#cb127-1" tabindex="-1"></a><span class="bu">echo</span> DestinationInvoice.sl3 <span class="op">&gt;&gt;</span> .gitignore</span></code></pre></div>
+<blockquote>
+<p><strong>Opomba</strong>: Če dodajanje datoteke <code>DestinationInvoice.sl3</code> v ukazni vrstici v okolju Windows ne deluje, jo dodajte ročno.</p>
+</blockquote>
+<p>Ne glede na operacijski sistem zaženite še sledeče ukaze:</p>
+<div class="sourceCode" id="cb128"><button type="button" class="copy-to-clipboard-button" title="Copy to clipboard" aria-label="Copy to clipboard"><i class="fa fa-copy"></i></button><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb128-1"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#cb128-1" tabindex="-1"></a><span class="fu">git</span> rm <span class="at">-r</span> <span class="at">--cached</span> DestinationInvoice.sl3</span>
+<span id="cb128-2"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#cb128-2" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-am</span> <span class="st">"Ne upoštevaj sprememb v podatkovni bazi"</span></span>
+<span id="cb128-3"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#cb128-3" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--allow-empty</span> <span class="at">-m</span> <span class="st">"Začetek dela na domači nalogi"</span></span>
+<span id="cb128-4"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#cb128-4" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> stilizacija</span>
+<span id="cb128-5"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#cb128-5" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--allow-empty</span> <span class="at">-m</span> <span class="st">"Začetek dela na I. nalogi"</span></span>
+<span id="cb128-6"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#cb128-6" tabindex="-1"></a><span class="fu">git</span> checkout main</span>
+<span id="cb128-7"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#cb128-7" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> funkcionalnosti</span>
+<span id="cb128-8"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#cb128-8" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">--allow-empty</span> <span class="at">-m</span> <span class="st">"Začetek dela na II. nalogi"</span></span>
+<span id="cb128-9"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#cb128-9" tabindex="-1"></a><span class="fu">git</span> checkout main</span>
+<span id="cb128-10"><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#cb128-10" tabindex="-1"></a><span class="fu">git</span> push <span class="at">--all</span></span></code></pre></div>
+<blockquote>
+<p><strong>Opomba</strong>: Zelo pomembno je, da vse omenjene ukaze izvedete takoj na začetku reševanja naloge!</p>
+</blockquote>
+</div>
+</div>
+<div id="DN11" class="section level3" number="11.1.3">
+<h3 class="hasAnchor"><span class="header-section-number">11.1.3</span> Skladnja strani in stilska preobrazba <i class="skrivanje fa-solid fa-circle-exclamation"></i><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN11" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div>
+<p>Trenutna verzija spletne aplikacije je potrebna stilske preobrazbe s pomočjo programskih jezikov <strong>HTML</strong>, <strong>CSS</strong> in <strong>JavaScript</strong>. Sledeče funkcionalnosti podprite v <strong>veji razvoja <code>stilizacija</code></strong>, kjer sledite naslednjim navodilom.</p>
+<blockquote>
+<p><strong>Namig</strong>: V vejo razvoja <i class="fa-solid fa-code-branch"></i><code>stilizacija</code> se prestavite z ukazom <code>git checkout stilizacija</code>.</p>
+</blockquote>
+<p>V tej nalogi nadgradite spletno aplikacijo tako, da implementirate naslednje funkcionalnosti:</p>
+<ul>
+<li>S pomočjo <strong>CSS</strong> poskrbite za sledečo stilsko preobrazbo:
+<ul>
+<li>Na spletnem naslovu <code>/prijava</code> HTML elementu <i class="fa-solid fa-tag"></i><code>input</code> in vsem HTML elementom <i class="fa-solid fa-tag"></i><code>select</code> dodajte <strong>rdeč rob</strong> in <strong>sivo senco</strong> kot je prikazano na sliki <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#fig:DN-robovi-in-sence">11.2</a>. V ta namen v stilski datoteki <span style="white-space:nowrap"><i class="fa-regular fa-file-code"></i><code>public/slogi/layout.css</code></span> najprej definirajte CSS razreda <i class="fa-brands fa-css3"></i><code>rob</code> in <i class="fa-brands fa-css3"></i><code>senca</code>, ki ju najdete v gradivu iz vaj <a href="https://github.com/ois-2022-2023/V3"><span class="sklop3">V3</span></a>.</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:DN-robovi-in-sence"></span>
+<img src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/DN-robovi-in-sence.png" alt="Robovi in sence" width="700">
+<p class="caption">
+Slika 11.2: Robovi in sence
+</p>
+</div>
+<ul>
+<li>Na spletnem naslovu <code>/prijava</code> dodajte edinemu tekstovnemu vnosnemu polju (HTML element <i class="fa-solid fa-tag"></i><code>input</code>) spodnji odmik za <code>14px</code>.</li>
+<li>Na spletnem naslovu <code>/</code> dodajte HTML elementu z enoličnim identifikatorjem <code>mapa_id</code> zgornji odmik <code>20px</code>.</li>
+<li>V CSS datoteki <span style="white-space:nowrap"><i class="fa-regular fa-file-code"></i><code>public/slogi/prijava.css</code></span> dodajte obstoječemu HTML elementu <i class="fa-solid fa-tag"></i><code>table</code> sredinsko poravnavo tako, da se bo tabela na spletnem mestu <code>/prijava</code> poravnala na sredino stolpca pod naslovom <code>Statistika v tabeli</code>.</li>
+<li>Tabeli na spletnem mestu <code>/prijava</code> je potrebno pripraviti temeljito stilsko posodobitev (glej sliko <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#fig:DN-tabela-izgled">11.3</a>), in sicer:
+<ul>
+<li>Celicama s tekstom <code>Destinacije</code> in <code>Lastnosti</code> popravite barvo pisave v temno sivo (<code>darkgrey</code>) in poravnajte ležeče.</li>
+<li>HTML elemente <i class="fa-solid fa-tag"></i><code>td</code> nizov <code>Turistične atrakcije</code>, <code>Živalski vrtovi</code>, <code>Hostli</code>, <code>Vsi</code>, <code>Izven Ljubljane</code>, <code>Spletna stran</code> in <code>Wikidata</code> zamenjajte z naslovnimi elementi tabele.</li>
+<li>V datoteki <span style="white-space:nowrap"><i class="fa-regular fa-file-code"></i><code>public/slogi/prijava.css</code></span> popravite obstoječi razred <i class="fa-brands fa-css3"></i><code>diagonala</code> tako, da bo prva polovica celice v levem zgornjem kotu po diagonali imela barvo ozadja <code>#E4FDEA</code>, druga polovica celice v desnem spodnjem kotu pa barvo ozadja <code>#CCF3D5</code>.</li>
+<li>Celica tabele s nizom <code>Lastnosti</code> naj se razprostira vertikalno čez vse vrstice tabele in naj bo poravnana po sredini vertikalno.</li>
+<li>Celica tabele s nizom <code>Destinacije</code> naj se razprostira horizontalno čez zadnje tri stolpce in naj bo poravnana horizontalno po sredini.</li>
+<li>Prvi vrstici dodajte barvo ozadja <code>#E4FDEA</code>, drugi vrstici barvo ozadja <code>#CCF3D5</code> ter spodnji črtkan rob zelene barve (<code>green</code>) velikosti <code>3px</code> in od vrstic 3 do 6 prvih stolpcev dodajte barvo ozadja <code>#CCF3D5</code> z desnim črtkanim robom zelene barve (<code>green</code>) velikosti <code>3px</code>. Preostalim celicam desno in spodaj od črtkanega roba zapolnite s polnimi robovi velikosti <code>1px</code> in temno sive barve (<code>darkgrey</code>).</li>
+<li>Vsem HTML elementom <i class="fa-solid fa-tag"></i><code>td</code> dodajte odmike v vse smeri velikosti <code>3px</code> ter vsem HTML elementom <span style="white-space:nowrap"><i class="fa-solid fa-tag"></i><code>th</code></span> odmike v vse smeri velikosti <code>6px</code>.</li>
+</ul>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:DN-tabela-izgled"></span>
+<img src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/DN-tabela-izgled.png" alt="Izgled tabele" width="350">
+<p class="caption">
+Slika 11.3: Izgled tabele
+</p>
+</div></li>
+</ul></li>
+<li>Dodajanje <strong>zastavic</strong>:
+<ul>
+<li><p>Na spletnem mestu <code>/prijava</code> se ob izbiri uporabnika ter kliku na gumb <code>Prijava uporabnika</code> izvede prijava uporabnika ter prehod na osnovno spletno mesto <code>/</code> nakupovalnega seznama.</p></li>
+<li><p><span style="background-color:#e6ffee; padding:4px; border-bottom:1px solid #73AD21">Na strani <strong>strežnika</strong></span> v datoteki <i class="fa-regular fa-file-code"></i><code>streznik.js</code> dopolnite funkcijo <i class="fa-solid fa-tag"></i><code>vrniHtmlZastavico</code> tako, da najprej preberete državo prijavljene stranke, kjer si lahko pomagate z obstoječo funkcijo za pridobivanje države stranke <i class="fa-solid fa-tag"></i><code>vrniDrzavoStranke</code>.</p></li>
+<li><p>Nato na spletnem mestu <a href="https://restcountries.com/"><i class="fa-solid fa-earth-europe"></i>REST Countries</a> uporabite ustrezni zunanji vir, ki kot vhod prejme ime države in vrne podatke, kjer je mogoče razbrati kratico države po standardu <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2"><i class="fa-brands fa-wikipedia-w"></i><code>ISO 3166-1 alpha-2 (cca2)</code></a>.</p></li>
+<li><p>V nadaljevanju uporabite obstoječo spletno storitev <a href="https://flagpedia.net/download/api"><i class="fa-solid fa-earth-europe"></i>Flagpedia API</a>, ki vsako kratico države po standardu <code>ISO 3166-1 alpha-2 (cca2)</code> preslika v pripadajočo državo <strong>v obliki HTML elementa img</strong> standardne velikosti <code>16px</code> širine in <code>12px</code> višine, kjer se ob pravilni implementaciji prikaže slika zastavice levo od gumba <code>Odjava {trenutni uporabnik}</code> obstoječega uporabnika (glej sliko <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#fig:DN-zastava">11.4</a>).</p></li>
+<li><p>V primeru imena države <code>USA</code> zunanje storitve v <a href="https://restcountries.com/"><i class="fa-solid fa-earth-europe"></i>REST Countries</a> ne bodo delovale, zato v tem primeru ročno nastavite kratico države na <code>us</code> po standardu <code>ISO 3166-1 alpha-2 (cca2)</code>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:DN-zastava"></span>
+<img src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/DN-zastava.png" alt="Primer prikaza argentinske zastave za uporabnika Diego Gutiérrez" width="150">
+<p class="caption">
+Slika 11.4: Primer prikaza argentinske zastave za uporabnika Diego Gutiérrez
+</p>
+</div></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="DN12" class="section level3" number="11.1.4">
+<h3 class="hasAnchor"><span class="header-section-number">11.1.4</span> Podpora funkcionalnosti na odjemalcu in strežniku <i class="skrivanje fa-solid fa-circle-exclamation"></i><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN12" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div>
+<p>Funkcionalnosti v nadaljevanju podprite v <strong>veji razvoja <i class="fa-solid fa-code-branch"></i><code>funkcionalnosti</code></strong>, kjer sledite naslednjim navodilom:</p>
+<ul>
+<li><p>Na spletni strani <code>/prijava</code> lahko opazite seznam računov, ki se nahajajo v podatkovni bazi. Če izberemo enega izmed računov, se prikaže neustrezen račun. Za vsak račun <strong>iz podatkovne baze</strong> imate na voljo <strong>podatke o stranki</strong> (<em>angl. Customer</em>), zato <strong>v račun</strong> vnesite ustrezne <strong>podatke o prodajalcu</strong>, medtem ko <strong>kupec</strong> in <strong>dobavitelj</strong> ostaneta <strong>nespremenjena</strong>. V naslednji tabeli so opredeljene preslikave podatkov o prodajalcu (stranki), ki jih morate vključiti na račun za stranko prodajalne FRI izletnik.</p>
+<table style="width:100%;">
+<colgroup>
+<col width="57%">
+<col width="14%">
+<col width="28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Podatki o prodajalcu na računu</th>
+<th align="center">&nbsp;</th>
+<th align="left">Potrebna polja iz podatkovne baze</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong><code>D_3036</code></strong> v strukturi <code>G_SG2</code> / <code>S_NAD</code> / <code>C_C080</code></td>
+<td align="center">←</td>
+<td align="left"><code>FirstName LastName</code></td>
+</tr>
+<tr class="even">
+<td align="left"><strong><code>D_3042</code></strong> v strukturi <code>G_SG2</code> / <code>S_NAD</code> / <code>C_C059</code></td>
+<td align="center">←</td>
+<td align="left"><code>Address</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong><code>D_3164</code></strong> v strukturi <code>G_SG2</code> / <code>S_NAD</code></td>
+<td align="center">←</td>
+<td align="left"><code>City</code></td>
+</tr>
+<tr class="even">
+<td align="left"><strong><code>D_3228</code></strong> v strukturi <code>G_SG2</code> / <code>S_NAD</code> / <code>C_C819</code></td>
+<td align="center">←</td>
+<td align="left"><code>Country</code></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong><code>D_3251</code></strong> v strukturi <code>G_SG2</code> / <code>S_NAD</code></td>
+<td align="center">←</td>
+<td align="left"><code>PostalCode</code></td>
+</tr>
+<tr class="even">
+<td align="left"><strong><code>D_3148</code></strong> v strukturi <code>G_SG2</code> / <code>G_SG5</code> / <code>S_COM</code> / <code>C_C076</code></td>
+<td align="center">←</td>
+<td align="left"><code>Phone</code></td>
+</tr>
+</tbody>
+</table>
+<p>Dodatnih popustov pri izpisu računov iz podatkovne baze <strong>ne upoštevajte</strong>. Primer prikaza računa iz podatkovne baze za uporabnika <strong>Mark Philips (4) - 2009-01-06</strong> (4. račun na seznamu) je na voljo na <a href="https://teaching.lavbic.net/cdn/OIS/DN/primer-iz-baze.xml"><i class="fa-solid fa-earth-europe"></i>primer-iz-baze.xml</a>.</p></li>
+<li><p>Pri pregledu obstoječih računov dopustov imamo na voljo premalo informacij, zato je potrebno <strong>pri izbiri pregleda podrobnosti</strong> obstoječega računa <strong>izpisati dodatne podatke</strong> (glej sliko <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#fig:DN-podrobnosti-dopusta">11.5</a>). <span style="background-color:#e6ffee; padding:4px; border-bottom:1px solid #73AD21">Na strani <strong>odjemalca</strong></span> v datoteki <span style="white-space:nowrap"><i class="fa-regular fa-file-code"></i><code>public/skripte/prijava.js</code></span> je potrebno dopolniti implementacijo izbire računa tako, da preberete postavke računa (destinacije) ter izpišete skupno ceno izleta in najdražjo destinacijo v HTML element z enoličnim identifikatorjem <code>skupnaCenaIzleta</code> v obliki <code>Skupna cena izleta znaša {cena} €, pri čemer je najdražja destinacija {ime}.</code>, kjer je parameter <code>{cena}</code> vsota vseh postavk računa in parameter <code>{ime}</code> ime najdražje destinacije izmed postavk računa. Pri pridobivanju podrobnosti računa si lahko pomagate s storitvijo <code>/destinacije-racuna/:racunId</code>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:DN-podrobnosti-dopusta"></span>
+<img src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/DN-podrobnosti-racuna.png" alt="Podrobnosti dopusta za račun **Mark Philips (4) - 2009-01-06**" width="350">
+<p class="caption">
+Slika 11.5: Podrobnosti dopusta za račun <strong>Mark Philips (4) - 2009-01-06</strong>
+</p>
+</div></li>
+<li><p>Da bi izboljšali iskanje obstoječih računov je potrebno implementirati <strong>preprost iskalnik</strong> <span style="background-color:#e6ffee; padding:4px; border-bottom:1px solid #73AD21">na strani <strong>odjemalca</strong></span> v datoteki <span style="white-space:nowrap"><i class="fa-regular fa-file-code"></i><code>public/skripte/prijava.js</code></span> tako, da se pri vpisu iskalnega niza v vnosno polje z enoličnim identifikatorjem <code>iskalniNiz</code> z vsaj tremi znaki označijo vsi elementi v seznamu računov tako, da se barva ozadja nastavi na <code>linen</code>, sicer se ozadje nastavi na privzeto brez barve ozadja. Iskanje naj deluje neodvisno od velikih in malih črk (npr. pri iskalnem nizu <code>lea</code> najdemo, med drugimi, tudi obstoječ račun <code>Heather Leacock (309) - 2012-09-26</code>, kot to prikazuje slika <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#fig:DN-iskanje">11.6</a>). Pri implementaciji se vam s posebnimi znaki ni potrebno posebej ukvarjati.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:DN-iskanje"></span>
+<img src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/DN-iskanje.png" alt="Rezultat iskanja po iskalnem nizu **`lea`**" width="350">
+<p class="caption">
+Slika 11.6: Rezultat iskanja po iskalnem nizu <strong><code>lea</code></strong>
+</p>
+</div></li>
+<li><p>Na spletnem mestu <code>/</code> se ob izbiri turističnih zanimivosti iz levega seznama v košarico (desno) prikaže pri vsakem elementu v košarici gumb <code>...</code>. Dopolnite implementacijo <span style="background-color:#e6ffee; padding:4px; border-bottom:1px solid #73AD21">na strani <strong>odjemalca</strong></span> v datoteki <span style="white-space:nowrap"><i class="fa-regular fa-file-code"></i><code>public/skripte/seznam.js</code></span> tako, da <strong>izpišete dodatne podatke</strong> v HTML element z enoličnim identifikatorjem <code>sporocilo</code>, in sicer <strong>celoten naslov vseh elementov</strong> v seznamu atributa <code>address</code>, <strong>URL naslov</strong>, če je ta na voljo (atribut <code>extratags.website</code>) in <strong>datum vnosa</strong> (atribut <code>indexed_date</code>). V primeru, da storitev <code>/vec-o-destinaciji-api/:id</code> vrača niz <code>napaka</code>, izpišite v omenjen HTML element sporočilo <code>Podatki niso na voljo</code>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:DN-podrobnosti-kosarice"></span>
+<img src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/DN-podrobnosti-kosarice.png" alt="Podrobnosti destinacije **Živalski vrst** v košarici" width="350">
+<p class="caption">
+Slika 11.7: Podrobnosti destinacije <strong>Živalski vrst</strong> v košarici
+</p>
+</div></li>
+<li><p><span style="background-color:#e6ffee; padding:4px; border-bottom:1px solid #73AD21">Na strani <strong>odjemalca</strong></span> na spletnem mestu <code>/</code> najprej <strong>dopolnite prikaz izbranih elementov</strong> v košarici <strong>na zemljevidu</strong>. Nato na podlagi dokumentacije na spletnem mestu <a href="https://www.liedman.net/leaflet-routing-machine/api/"><i class="fa-solid fa-earth-europe"></i>Leaflet Routing Machine API</a> podprite <strong>prikaz poti</strong> elementom, ki se dodajajo v košarico. Prikaz poti naj bo privzeto minimiziran (z možnostjo povečanja desno zgoraj v zemljevidu), v slovenskem jeziku in črta naj bo črtkana z razmakom <code>4,75</code>, debeline <code>5</code> in barvo poti <code>#4E732E</code>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:DN-zemljevid"></span>
+<img src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/DN-zemljevid.png" alt="Prikaz poti med destinacijami **Žagerski mlin**, **Paviljon Tempel** in **Gabrijelov kozolc**" width="350">
+<p class="caption">
+Slika 11.8: Prikaz poti med destinacijami <strong>Žagerski mlin</strong>, <strong>Paviljon Tempel</strong> in <strong>Gabrijelov kozolc</strong>
+</p>
+</div></li>
+<li><p><span style="background-color:#e6ffee; padding:4px; border-bottom:1px solid #73AD21">Na strani <strong>strežnika</strong></span> v datoteki <span style="white-space:nowrap"><i class="fa-regular fa-file-code"></i><code>streznik.js</code></span> dopolnite implementacijo tako, da se ob obisku spletnega mesta <code>/prijava</code> <strong>posredujejo podatki v celice tabele</strong> po vnaprej določeni obliki podatkov na odjemalcu (tabela v datoteki <span style="white-space:nowrap"><i class="fa-regular fa-file-code"></i><code>views/prijava.hbs</code></span>, ki je prikazana na sliki <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#fig:DN-tabela">11.9</a>). Na strani strežnika <strong>pripravite podatke</strong> o:</p>
+<ul>
+<li><p>vseh turističnih atrakcij, živalskih vrtovih in hostlih,</p></li>
+<li><p>turističnih atrakcij, živalskih vrtovih in hostlih, ki so izven Ljubljane, pri čemer zadošča, da preverjate ali atribut <code>mesto</code> obstaja in v primeru, da obstaja, ali je znotraj atributa na voljo niz <code>Ljubljana</code>,</p></li>
+<li><p>turističnih atrakcij, živalskih vrtovih in hostlih, ki imajo na voljo spletno stran in</p></li>
+<li><p>turističnih atrakcij, živalskih vrtovih in hostlih, ki imajo na voljo podatek o Wikidata.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:DN-tabela"></span>
+<img src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/DN-tabela.png" alt="Statistika v tabeli" width="350">
+<p class="caption">
+Slika 11.9: Statistika v tabeli
+</p>
+</div></li>
+</ul></li>
+<li><p>Trenutna cena turističnih zanimivosti v košarici znaša <code>8,5 €</code> brez DDV za živalski vrt, <code>17,5 €</code> brez DDV za atrakcijo in <code>12 €</code> brez DDV za hostel. <span style="background-color:#e6ffee; padding:4px; border-bottom:1px solid #73AD21">Na strani <strong>strežnika</strong></span> v datoteki <span style="white-space:nowrap"><i class="fa-regular fa-file-code"></i><code>streznik.js</code></span> implementirajte <strong>črkovni popust</strong>, ki v vsakem imenu turistične zanimivosti prešteje največ pojavitev črk <strong>A do Z</strong> podprtih v <a href="https://www.ascii-code.com/"><i class="fa-solid fa-earth-europe"></i>ASCII tabeli</a> brez šumnikov. V primeru, da je <strong>najdenih pojavitev enake črke več kot 1</strong>, kjer <strong>enako štejemo velike in male črke</strong> (npr. <code>A</code> in <code>a</code>), naj se doda popust, ki je odvisen od <strong>desetiške vrednosti v ASCII tabeli</strong>, ki jo izrazimo v <strong>odstotku popusta</strong>. V primeru, da imamo enako število pojavitev črke za dve različni črki, uporabimo desetiško vrednost znaka, ki se prej pojavi v abecedi.</p>
+<ul>
+<li>Primer, kjer je ime destinacije <code>Žlebičev mlin</code> kot turistična atrakcija (osnovna cena brez DDV je <code>17,50 €</code>), je največ pojavitev <code>2x</code> črk <code>L</code>, <code>E</code> in <code>I</code>, pri čemer je prva črka v abecedi <code>E</code>, zato se upošteva popust v višini <code>69 %</code> k obstoječi ceni turistične zanimivosti in je končna cena omenjenega primera brez DDV <code>5,43 €</code>. Primer prikaza računa iz košarice je na voljo na <a href="https://teaching.lavbic.net/cdn/OIS/DN/primer-popusta.xml"><i class="fa-solid fa-earth-europe"></i>primer-popusta.xml</a>.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="združevanje-sprememb-v-repozitoriju" class="section level3" number="11.1.5">
+<h3 class="hasAnchor"><span class="header-section-number">11.1.5</span> Združevanje sprememb v repozitoriju <i class="skrivanje fa-solid fa-circle-exclamation"></i><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#zdru%C5%BEevanje-sprememb-v-repozitoriju" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div>
+<p>Z uporabo ukazov git veji razvoja <i class="fa-solid fa-code-branch"></i><code>stilizacija</code> in <i class="fa-solid fa-code-branch"></i><code>funkcionalnosti</code> <strong>združite v vejo razvoja <i class="fa-solid fa-code-branch"></i><code>main</code></strong>. Pri tem pazite, da samih vej ne izbrišete in da uveljavitve v posameznih vejah tudi prenesete v ustrezne veje v oddaljenem repozitoriju. Odpravite morebitne konflikte in spremembe uveljavite tudi v oddaljenem repozitoriju.</p>
+<p>V veji razvoj <i class="fa-solid fa-code-branch"></i><code>main</code> mora biti na voljo aplikacija, ki združuje funkcionalnosti obeh zgornjih nalog (<a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN11">11.1.3</a> in <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN12">11.1.4</a>), ki ste jih razvijali neodvisno in morajo le-te sedaj delovati kot celota.</p>
+<blockquote>
+<p><strong>Namig</strong>: Bodite pozorni, da po združitvi delujejo vse funkcionalnosti.</p>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="DN2" class="section level2" number="11.2">
+<h2 class="hasAnchor"><span class="header-section-number">11.2</span> Dopolnitev načrta in implementacija nove funkcionalnosti <small>(2. del)</small><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="DN-navodila" class="section level3" number="11.2.1">
+<h3 class="hasAnchor"><span class="header-section-number">11.2.1</span> Opis naloge in navodila <i class="skrivanje fa-solid fa-circle-exclamation"></i><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN-navodila" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div>
+<p>V okviru <strong>2. dela</strong> DN-ja morate izdelati:</p>
+<ul>
+<li><strong>načrt informacijske rešitve</strong> (glej podrobnosti v <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN-nacrt">11.2.4</a>) in</li>
+<li>na podlagi načrta <strong>implementirati novo funkcionalnost</strong> (glej podrobnosti v <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN-implementacija">11.2.5</a>), ki si jo zamislite sami in funkcionalnost predstavlja <strong>najmanj 3 HTML komponente</strong> ter uporabite:
+<ul>
+<li>1 master/detail načrtovalski vzorec,</li>
+<li>1 tehniko (graf) vizualizacije podatkov in</li>
+<li>1 dodatni zunanji vir podatkov, neposredno oz. posredno povezan z domeno domače naloge (npr. turizem, hostli, atrakcije, živalski vrtovi, spletna trgovina, geografija, računi idr.),</li>
+</ul></li>
+<li><strong>možnost všečkanja</strong> spletne aplikacije na podlagi <strong>tehnologije veriženja blokov</strong>.</li>
+</ul>
+<p>Vse zahteve so podrobneje opredeljene v nadaljevanju, v posamičnih nalogah <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN-ideja">11.2.2</a>, <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN-Generiranje-podatkov">11.2.3</a>, <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN-nacrt">11.2.4</a> in <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN-implementacija">11.2.5</a>.</p>
+<p>Razvita rešitev naj bo <strong>integrirana v obstoječo spletno aplikacijo na strani odjemalca</strong>, kjer ima lahko del funkcionalnosti podprte tudi na strani strežnika in s pomočjo API klicev pridobiva podatke iz zunanjih virov (<a href="https://teaching.lavbic.net/api/docs/"><i class="fa-solid fa-earth-europe"></i>Teaching API</a>, <a href="https://sensei.lavbic.net/"><i class="fa-solid fa-earth-europe"></i>Sensei veriga blokov</a> in 1 zunanji vir, ki ga izberete sami ter je neposredno ali posredno povezan z domeno domače naloge).</p>
+<blockquote>
+<p><strong>Opomba</strong>: Pred začetkom dela obvezno spremenite vrednost spremenljivke <strong><code>TEACHING_API_BAZA</code></strong> v datoteki <span style="white-space:nowrap"><i class="fa-regular fa-file-code"></i><code>knjiznice/js/koda.js</code></span> na vrednost, ki predstavlja vaše GitHub uporabniško ime ter velja za vaš lasten prostor za shranjevanje podatkov na <a href="https://teaching.lavbic.net/api/docs/"><i class="fa-solid fa-earth-europe"></i><strong>Teaching API</strong></a> strežniku.<br>
+Prav tako si morate na <a href="https://sensei.lavbic.net/"><i class="fa-solid fa-earth-europe"></i><strong>Sensei verigi blokov</strong></a> kreirati račun in zahtevati začetna sredstva, kot bo to podrobno predstavljeno v vaji <span class="sklop4">V10</span> (v okviru poglavij <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#V10-kreiranje">Dostop do verige blokov in kreiranje novega računa</a> in <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#V10-zacetna-sredstva">Pridobitev začetnih sredstev</a>). Javni ključ oz. naslov denarnice morate nato zapisati v spremenljivko <code>SENSEI_RACUN</code> v datoteki <span style="white-space:nowrap"><i class="fa-regular fa-file-code"></i><code>knjiznice/js/koda.js</code></span>.</p>
+</blockquote>
+</div>
+</div>
+<div id="DN-ideja" class="section level3" number="11.2.2">
+<h3 class="hasAnchor"><span class="header-section-number">11.2.2</span> Opis osnovne ideje predloga <i class="skrivanje fa-solid fa-circle-exclamation"></i><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN-ideja" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div>
+<p>Vaša funkcionalnost je namenjena prikazu podatkov na grafu, uporablja zunanji vir in uporablja še vsaj 3 poljubne HTML komponente. <a href="https://teaching.lavbic.net/api/docs/"><i class="fa-solid fa-earth-europe"></i><strong>Teaching API</strong></a> lahko uporabite, za branje obstoječih podatkov, dodajanje in posodabljanje. Ideja, način delovanja in uporaba HTML komponent je prepuščena vam.</p>
+<p>Predlog rešitve naj bo vaš, kjer si morate zamisliti <strong>scenarij uporabe</strong>, <strong>uporabnika</strong> (npr. neprijavljen uporabnik oz. gost ali prijavljen uporabnik kot stranka iz 1. dela domače naloge) in <strong>namen uporabe</strong> (npr. obveščanje, informativno, zabava, izobraževanje, igra ipd.).</p>
+<p>Funkcionalnost naj, razen morebitne prijavljene stranke iz obstoječe aplikacije, ne uporablja lastne podatkovne baze, ampak naj zgolj <strong>dostopa do podatkov</strong> (bere in ažurira) iz naslednjih <strong>podatkovnih virov</strong>:</p>
+<ul>
+<li>podatki o uporabniku (in morebitnih ostalih podatkov) iz <a href="https://teaching.lavbic.net/api/docs"><i class="fa-solid fa-earth-europe"></i>platforme <strong>Teaching API</strong></a>,
+<ul>
+<li>za vsakega študenta je pripravljena lastna podatkovna baza z enoličnim identifikatorjem, enakim GitHub uporabniškemu imenu,</li>
+</ul></li>
+<li>podatki na <a href="https://sensei.lavbic.net/"><i class="fa-solid fa-earth-europe"></i><strong>Sensei</strong> verigi blokov</a> (podrobnosti v <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN-implementacija">11.2.5</a>),
+<ul>
+<li>račun si kreirate sami in zahtevate začetna sredstva, kot je opisano v <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN-navodila">11.2.1</a>,</li>
+</ul></li>
+<li><strong>1 zunanji podatkovni vir</strong>, ki je neposredno ali posredno povezan z vašo izbrano domeno,
+<ul>
+<li>npr. <a href="https://apipheny.io/free-api/"><i class="fa-solid fa-earth-europe"></i>Top 15 free APIs</a>, <a href="https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/"><i class="fa-solid fa-earth-europe"></i>Big List of Free and Open Public APIs</a>, <a href="https://nordicapis.com/9-free-public-apis-that-offer-up-some-cool-open-data/"><i class="fa-solid fa-earth-europe"></i>9 Free Public APIs That Offer Up Some Cool Open Data</a>, <a href="https://api.nasa.gov/"><i class="fa-solid fa-earth-europe"></i>NASA APIs</a>, <a href="https://podatki.gov.si/data/metadata-api-docs"><i class="fa-solid fa-earth-europe"></i>OPSI - Odprti podatki Slovenije</a> idr.</li>
+</ul></li>
+</ul>
+<p>Pri integraciji z zunanjim virom se predvideva, da boste komunicirali preko API-ja, pogojno pa lahko v svoj repozitorij prenesete tudi podatke v datoteki (npr. seznam v obliki datoteke, ki ga vaša funkcionalnost uporablja, kjer je dodatno opisan postopek predhodnega procesiranja podatkov oz. še bolje, datoteko prenesete v <strong>Teaching API</strong> podatkovno bazo, v okviru vašega dostopa).</p>
+<blockquote>
+<p><strong><i class="fa-solid fa-file-arrow-up"></i>Kaj naj oddam?</strong></p>
+</blockquote>
+<div class="navodilaZaOddajo">
+<p>Na veji razvoja <i class="fa-solid fa-code-branch"></i><code>main</code> morate dopolniti:</p>
+<ul>
+<li>vsebino datoteke <span style="white-space:nowrap"><i class="fa-regular fa-file-code"></i><code>views/opis.hbs</code></span>, kjer so označena mesta, kamor morate vnesti naslednjo vsebino:
+<ul>
+<li><strong>opis ideje, ki jo funkcionalnost podpira</strong>, kjer z do <span class="math inline"><span class="MathJax_Preview" style="color: inherit;"></span><span id="MathJax-Element-1-Frame" class="mjx-chtml MathJax_CHTML" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;200&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="font-size: 117%; position: relative;"><span id="MJXc-Node-1" class="mjx-math" aria-hidden="true"><span id="MJXc-Node-2" class="mjx-mrow"><span id="MJXc-Node-3" class="mjx-mn"><span class="mjx-char MJXc-TeX-main-R" style="padding-top: 0.369em; padding-bottom: 0.369em;">200</span></span></span></span><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>200</mn></math></span></span><script type="math/tex" id="MathJax-Element-1">200</script></span> besedami opišete osnovni scenarij uporabe, kdo je ciljna publika in za kakšen namen se funkcionalnost uporablja,</li>
+<li><strong>uporabljeni zunanji vir podatkov</strong>, kjer navedete zunanji vir podatkov (URL naslov) ter opišete način vključitve (neposredni API klic, uvožena statična datoteka ipd.) in kaj je bil namen uporabe (tj. kako se vključuje v osnovno idejo funkcionalnosti).
+<ul>
+<li>V primeru, da boste uporabili zgolj statične podatke v datoteki, potem podajte tudi podrobnosti o pridobitvi teh podatkov (npr. ali ste datoteko zgolj prenesli ali ste mogoče podatke pridobili s spletne strani z določeno programsko kodo, ki ste jo sami napisali).</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="DN-Generiranje-podatkov" class="section level3" number="11.2.3">
+<h3 class="hasAnchor"><span class="header-section-number">11.2.3</span> Generiranje podatkov <i class="skrivanje fa-solid fa-circle-exclamation"></i><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN-Generiranje-podatkov" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div>
+
+<p>Za potrebe testiranja v podatkovni bazi Teaching API pripravite tudi vsaj <strong>1 vzorčen primer</strong> (npr. scenariji, dogodki, artikli, uporabniki, entitete ipd.), ki bodo na vaši funkcionalnosti lahko uporabljeni in zanje napolnite podatke (tj. v Teaching API podatkovno bazo vstavite nekaj testnih podatkov za vsak primer).</p>
+<blockquote>
+<p><strong>Opomba</strong>: Začetna verzija naj že vsebuje zgenerirane podatke, da je možno takojšnje testiranje funkcionalnost, ponovno generiranje podatkov pa mora biti na voljo.</p>
+</blockquote>
+</div>
+<div id="DN-nacrt" class="section level3" number="11.2.4">
+<h3 class="hasAnchor"><span class="header-section-number">11.2.4</span> Načrt informacijske rešitve <i class="skrivanje fa-solid fa-circle-exclamation"></i><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN-nacrt" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div>
+<p>Za delovanje vaše domače naloge morate pripraviti <strong>načrt informacijske rešitve po objektnem pristopu</strong>. Uporabiti morate UML diagramsko tehniko, kjer diagrame pripravite s pomočjo odprtokodnega orodja <a href="https://plantuml.com/"><i class="fa-solid fa-earth-europe"></i>PlantUML</a> za načrtovanje informacijskih sistemov.</p>
+<p>Diagrame lahko pripravite preprosto s pomočjo spletnega urejevalnika, ki je na voljo na spletnem naslovu <span style="white-space:nowrap"><a href="https://teaching.lavbic.net/plantuml/"><i class="fa-solid fa-earth-europe"></i>https://teaching.lavbic.net/<strong>plantuml</strong></a></span> in vam kot rezultat vrne spletno povezavo, ki generira sliko. V vaš repozitorij tako ne dodajate binarnih datotek slik, ampak zgolj povezave, ki jih generira prej omenjeni urejevalnik.</p>
+<blockquote>
+<p><strong>Opomba</strong>: Primere diagramov, vključno z izvorno kodo, lahko najdete v okviru predavanja <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#Objektni-razvoj"><span class="sklop3">P10</span></a>, kar vam lahko pomaga pri razvoju vaših diagramov.</p>
+</blockquote>
+<p><strong>Diagrami</strong>, ki jih boste pripravili v okviru načrta, morajo biti <strong>med seboj skladni</strong>, kar pomeni:</p>
+<ul>
+<li><i class="fa-solid fa-diagram-project"></i><strong>diagram primerov uporabe (DPU)</strong> mora predstavljati <strong>vse funkcionalnosti</strong>, ki jih domača naloga ponuja, kjer dopolnite obstoječega na sliki <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#fig:DN-DPU">11.10</a>,
+<ul>
+<li><a href="https://plantuml.com/use-case-diagram"><i class="fa-solid fa-earth-europe"></i>Use Case Diagram</a> PlantUML dokumentacija z vsemi gradniki, ki so vam na voljo,</li>
+</ul></li>
+<li><i class="fa-solid fa-diagram-project"></i><strong>VOPC razredni diagram</strong> mora vsebovati vse atribute (tj. vnosna polja, globalne spremenljivke idr.) in metode (tj. akcije nad elementi, npr. kliki gumbov ipd.) domače naloge, kjer dopolnite obstoječega na sliki <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#fig:DN-RD">11.11</a>,
+<ul>
+<li><a href="https://plantuml.com/class-diagram"><i class="fa-solid fa-earth-europe"></i>Class Diagram</a> PlantUML dokumentacija z vsemi gradniki, ki so vam na voljo,</li>
+</ul></li>
+<li>izbrani <i class="fa-solid fa-diagram-project"></i><strong>diagram zaporedja</strong> (pripravite zgolj enega za osnovni tok <strong>vaše nove funkcionalnosti</strong>) mora realizirati izbran primer uporabe in skupaj z VOPC razrednim diagramom mora biti dovolj podroben, da lahko programer to funkcionalnost tudi implementira,
+<ul>
+<li><a href="https://plantuml.com/sequence-diagram"><i class="fa-solid fa-earth-europe"></i>Sequence Diagram</a> PlantUML dokumentacija z vsemi gradniki, ki so vam na voljo.</li>
+</ul></li>
+</ul>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:DN-DPU"></span>
+<img src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/ZLNDZjem4BxxAInwYyJUAbNL2krVLqNzGxji3nMNmHc2IR2ZYGCjBO-m3x7liljUjPq03WJ49L9cvllnpCIvAWoGA" alt="Diagram primerov uporabe (DPU) začetnega repozitorija in dela predvidenih funkcionalnosti 1. dela DN (ki jih morate dopolniti), brez funkcionalnosti 2. dela DN, ki jih morate predlagati sami PlantUML." width="500">
+<p class="caption">
+Slika 11.10: <strong>Diagram primerov uporabe (DPU)</strong> začetnega repozitorija in dela predvidenih funkcionalnosti 1. dela DN (ki jih morate dopolniti), brez funkcionalnosti 2. dela DN, ki jih morate predlagati sami <a href="https://teaching.lavbic.net/plantuml/uml/ZLNDZjem4BxxAInwYyJUAbNL2krVLqNzGxji3nMNmHc2IR2ZYGCjBO-m3x7liljUjPq03WJ49L9cvllnpCIvAWoGAUSPlniyCLQaKkL0CETZ46b2kbInq9acRWXKOLEeJ50LumJAp0pnjxdEPABcDis5VI05LMM10WhaVnaFU6yzxt8g3RgufXYfYhrxVt_puTEjZGAHNbR1SMQHR1tGWZ2QRW9SLR9Vq2guArBQd7OsqSfKFKW8_coj1g4rOnbE33UQaqocXiUIK1Yf5MD69sYcI5x26-9FkIOOAvbk8vq1oHaiiXcgaIetwGw7WkyoEvZ5jOHvrujt__K21MkjbXWYYAbKoKXT3_gUUXEnxumvmw2I37dd_g7FvIf3upqutvi1TgBeHsnr8Oe2d-3PgiHM6Pgm0Q7bZXqkrdbP6BseZ-VZTtNiA2YAxA8QMHYPedjVS0DZp6H8yhYjE44JwxHqMmf2pYnJqqIGEa6XuFMPZE-1L1DDSmSeKXmfmhSNQHOOidu7OOlxZsvgZMNO4v0vrOsD8h8AfOAjlIht0C86cyXDhe5oxOcYpyDlNriPVhgCf_6FbYJlndgft2OTQA_PVcVih5ULxLp7fCTAsnbK0Rz5mJ5ivM1Nq_VP9bsrFtKRKlts0YI5dxWfoGttzLd9wKYjGCcvN3WQJrxZlkZ20uPLiR2rltQLPplVQU6XrC4vjc8OQbKVQTk9-KMPN_JsL_yZlxoqroYgkDSx0tiuCqSWbSZA6DiPMdtMX6VrZpSyUed6YlDkcLTBq_8zsSK9hghkmVdRiy4tVGGTQh3MQx5xvl6EeW-kDdPcRnsuSSjUsTRPd-r_"><small><i class="fa-solid fa-diagram-project"></i>PlantUML</small></a>.
+</p>
+</div>
+
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:DN-RD"></span>
+<img src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/dLNHSjem47pNLzmq3qs6GafQfjIJOP90cj9cGYVa1uGiZC18hYGxnMt-lIVRW35c6leYCtktUwVJIbmPIxMDbo4y3" alt="Razredni diagram začetnega repozitorija in dela predvidenih funkcionalnosti 1. dela DN (ki jih morate dopolniti), brez funkcionalnosti 2. dela DN, ki jih morate predlagati sami PlantUML." width="550">
+<p class="caption">
+Slika 11.11: <strong>Razredni diagram</strong> začetnega repozitorija in dela predvidenih funkcionalnosti 1. dela DN (ki jih morate dopolniti), brez funkcionalnosti 2. dela DN, ki jih morate predlagati sami <a href="https://teaching.lavbic.net/plantuml/uml/dLNHSjem47pNLzmq3qs6GafQfjIJOP90cj9cGYVa1uGiZC18hYGxnMt-lIVRW35c6leYCtktUwVJIbmPIxMDbo4y3WWn2o4ZgkaIM4YDWTy4O4BP8j0gbdvVXKh3yqnOxd2bVQvpxAJpvQPxsqUKQgsUSt0I8fEyL4KlBoTEZEfLhrTRu6HwCMMyMotnqUz-Qb_KwJ4bhLRXGJaKsvVxpDkTTgTEZaihxC7cU7VQcR8TdbIMltfKWQOhXAROymvW-IzBGn789TO7XWlNErMsuYpZMKsbmH1cafdmEJ2XMSZ9soqb59BRLSH1QJjJXFIpGnrRpLCf5b2TN1De94QH5KeQy60qcNDc4M-rMYxQnEK44Yt50qr5CdODBFYfoRvqw7iWf7q7aKeqjL9y3mNpO1fBvWJFDkI1JccYZcVdNJJWxlR9yyxXDAKponFgmLTheqV-C-O6-SeFLABq6ZKHxeMVbOWBPQWMZ9vxmX-P9PncdwBwaPgxBQb8cFzkIrAcxT5iry3B-bpvE5G1x5sl1YGYZT5QgT1qxg4PLSYfhBBlwKh5jewUKdmZ4XoP1tXQGWPLwiXjl4nS1tveCQS9hHEbUEuB9kQyuhEDw1WzYXQkePeiCi3929oQm2rz6uyUhhMxHnjw4NRcWSgLRW0UkCWDbxcobFk4jsLO2jrnjUHMhxPO0nxeaXyQnL0cIZ1-ZnTllsmfMAvHm5keJl6WMbcf7nkB_UfojqNQW5fisgqPUYD2V1o2Qz_Nt9ZztMpUY3S0xLQh3VYZ6KVDdWFUjreN3iWCHtBRkU2VNk6YNNgLcm7ECoGppX7C3mueJ4NMvZgsScuiKlXhbqtAvvTpfDF85J9woIorsPNq8eNKDBRRLbdtNxcbkg_D9UIAIn__v_y2"><small><i class="fa-solid fa-diagram-project"></i>PlantUML</small></a>.
+</p>
+</div>
+<p>Zato bodite še posebej pozorni, da bo <strong>načrt skladen z vašo implementacijo</strong>!</p>
+<blockquote>
+<p><strong><i class="fa-solid fa-file-arrow-up"></i>Kaj naj oddam?</strong></p>
+</blockquote>
+<div class="navodilaZaOddajo">
+<p>Na veji razvoja <i class="fa-solid fa-code-branch"></i><code>main</code> morate dopolniti:</p>
+<ul>
+<li>vsebino datoteke <span style="white-space:nowrap"><i class="fa-regular fa-file-code"></i><code>views/nacrt.hbs</code></span>, kjer so označena mesta, kamor morate vnesti naslednje <strong>slike diagramov</strong>:
+<ul>
+<li><i class="fa-solid fa-diagram-project"></i><strong>diagram primerov uporabe (DPU)</strong>,
+<ul>
+<li>Pripravite 1 diagram, ki mora vsebovati vsaj 2 primera uporabe, ki jih vaša aplikacija podpira. Pri tem ne pozabite identificirati vseh akterjev, ki vaš sistem uporabljajo in zunanje vire, do katerih vaš sistem dostopa.</li>
+</ul></li>
+<li><i class="fa-solid fa-diagram-project"></i><strong>VOPC razredni diagram</strong> in
+<ul>
+<li>Pripravite 1 diagram, ki mora vsebovati načrt vseh razredov, ki jih bo vaša aplikacija implementirala (tj. vsaj funkcionalnosti datotek <code>index.html</code>, <code>koda.js</code>, API platforme Teaching, Sensei verige blokov ter še enega izbranega zunanjega vira (vključite le tiste metode, ki jih vaša aplikacija uporablja)).</li>
+</ul></li>
+<li><i class="fa-solid fa-diagram-project"></i><strong>diagram zaporedja</strong> osnovnega toka ene izmed vaših glavnih funkcionalnosti.
+<ul>
+<li>Pripravite 1 diagram, ki mora predstavljati podrobno implementacijo osnovnega toka dogodkov funkcionalnosti, ki ste jo identificirali na primeru uporabe (glej diagram primerov uporabe).</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="DN-implementacija" class="section level3" number="11.2.5">
+<h3 class="hasAnchor"><span class="header-section-number">11.2.5</span> Implementacija funkcionalnosti <i class="skrivanje fa-solid fa-circle-exclamation"></i><a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN-implementacija" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div>
+
+<p>Pri implementaciji upoštevajte naslednje zahteve in omejitve:</p>
+<ul>
+<li><p>implementirajte inovativno funkcionalnost, ki deluje nad <strong>poljubnimi podatki domen domače naloge</strong> iz <a href="https://teaching.lavbic.net/api/docs/"><span style="white-space:nowrap"><i class="fa-solid fa-earth-europe"></i>platforme <strong>Teaching API</strong></span></a>,</p></li>
+<li><p>izvajanje vaše funkcionalnosti se lahko začne na način (funkcionalnost ste implementirali v poglavju <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#DN-Generiranje-podatkov">11.2.3</a>), da ima uporabnik <strong>možnost izbora</strong> vsaj enega <strong>vzorčnega primera</strong>.</p></li>
+<li><p>uporabite <strong>1 master/detail načrtovalski vzorec</strong>,</p>
+<ul>
+<li>tj. funkcionalnost, ko uporabnik izbere določeno vrednost s seznama (npr. tabela, graf, zemljevid idr.), se posodobi množica odvisnih podatkov (podobno funkcionalnost smo implementirali pri pregledu albumov, seznamov predvajanj in žanrov po izvajalcih na vajah <span class="sklop3">V5</span> <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#V5">Pregled pesmi iz podatkovne baze</a>),</li>
+</ul></li>
+<li><p>pri <strong>vizualizaciji podatkov</strong> uporabite <strong>1 tehniko</strong>, ki mora biti implementirana s knjižnico <strong><a href="https://canvasjs.com/"><i class="fa-solid fa-earth-europe"></i>CanvasJS</a></strong>. Pri tem si lahko uporabite z obstoječo predlogo v <span style="white-space:nowrap"><i class="fa-regular fa-file-code"></i><code>views/prijava.hbs</code></span> HTML elementa z enoličnim identifikatorjem <code>vsebnikGrafa</code>. Po želji lahko predlogo prestavite na poljubno spletno mesto v domači nalogi.</p></li>
+<li><p>Kot nadobuden študent FRI želite nadgraditi vašo odjemalsko spletno rešitev tako, da omogoča <strong>všečkanje spletne aplikacije</strong> preko decentralizirane verige blokov <a href="https://sensei.lavbic.net/"><i class="fa-solid fa-earth-europe"></i>Sensei</a> (Ethereum testno omrežje) z uporabo knjižnice <a href="https://web3js.readthedocs.io/en/v1.8.2/index.html"><i class="fa-solid fa-earth-europe"></i>web3.js</a> različico <code>1.8.2</code>, kjer je potrebno izvesti naslednje korake:</p>
+<blockquote>
+<p><strong>Namig</strong>: Pri implementaciji si lahko pomagate z nalogo vaj <span class="sklop4">V10</span> <a href="https://teaching.lavbic.net/OIS/2022-2023/DN.html#V10">Klepetalnica in uvod v tehnologijo veriženja blokov</a>.</p>
+</blockquote>
+<ul>
+<li>Najprej je treba ustvariti račun na spletnem naslovu <a href="https://sensei.lavbic.net/"><i class="fa-solid fa-earth-europe"></i>https://<strong>sensei</strong>.lavbic.net</a>, kjer se nahaja <strong>Ethereum testno omrežje</strong>.</li>
+<li>Na novo ustvarjenem računu zaenkrat ni nobenih sredstev, zato jih je treba pridobiti. Začetna sredstva na našem Ethereum testnem omrežju lahko zahteva vsak študent pri predmetu <strong>zgolj 1x</strong>, in sicer s pomočjo klica REST API metode <a href="https://teaching.lavbic.net/api/docs/#/OIS/get_OIS_BC_registracija"><strong><code>/OIS/BC/registracija</code></strong></a>, ki je na voljo na strežniku <a href="https://teaching.lavbic.net/api/docs"><i class="fa-solid fa-earth-europe"></i>Teaching API</a>.</li>
+<li>Po uspešno pridobljenih sredstvih določite naslov vašega računa (javni ključ lastnika aplikacije) globalne konstante <code>SENSEI_RACUN</code> v datoteki <span style="white-space:nowrap"><i class="fa-regular fa-file-code"></i><code>knjiznice/js/koda.js</code></span>. To bo naslov na kateremu bodo lahko ostali študenti <strong>všečkali</strong> z izvajanjem transakcij.</li>
+<li>V aplikaciji je treba implementirati prijavo računa na poljubno mesto aplikacije v datoteki <code>index.html</code> v poljubni obliki (npr. neposredno na strani, skrivanjem komponent, modalna okna itd.), ki naj omogoča poljubnemu obiskovalcu prijavo z lastnim računom. Zato uporabite 3 HTML komponente:
+<ul>
+<li>vnosno polje za <strong>naslov računa</strong>,</li>
+<li>vnosno polje za <strong>geslo</strong> in</li>
+<li>gumb za <strong>potrditev prijave</strong>.</li>
+</ul></li>
+<li>Aplikacija naj omogoča <strong>všečkanje</strong> obiskovalcem s prijavljenim Ethereum računom, kjer obiskovalec všečkanje proži na podlagi transakcije, in sicer prenosa sredstev kot stopnje všečnosti spletne aplikacije od višine <code>0.1</code> (najmanj všeč) do največ <code>1</code> ETH (najbolj všeč) za všeček na račun lastnika spletne aplikacije (konstanta <code>SENSEI_RACUN</code>).</li>
+<li>Aplikacija naj pri izvajanju všečkov <strong>združuje podatke</strong> iz verige blokov <a href="https://sensei.lavbic.net/"><strong><i class="fa-solid fa-earth-europe"></i>Sensei</strong></a> v <a href="https://teaching.lavbic.net/api/docs/"><i class="fa-solid fa-earth-europe"></i><strong>Teaching API</strong></a> podatkovno bazo (npr. zgoščene vrednosti transakcij z drugimi poljubnimi podatki).</li>
+<li>Implementirati je treba tudi <strong>prikaz vseh prejetih všečkov v obliki seznama</strong>.</li>
+</ul></li>
+</ul>
+<blockquote>
+<p><strong><i class="fa-solid fa-file-arrow-up"></i>Kaj naj oddam?</strong></p>
+</blockquote>
+<div class="navodilaZaOddajo">
+<p>Na veji razvoja <i class="fa-solid fa-code-branch"></i><code>main</code> morate dopolniti:</p>
+<ul>
+<li>vsebino datoteke <span style="white-space:nowrap"><i class="fa-regular fa-file-code"></i><code>opis.html</code></span>, kjer so označena mesta, kamor morate vnesti naslednjo vsebino:
+<ul>
+<li><strong>master/detail načrtovalski vzorec</strong>, kjer navedete, na kakšen način boste vzorec uporabili,</li>
+<li><strong>uporabljena tehnika za vizualizacijo podatkov</strong>, kjer navedete uporabljeno tehniko in zakaj ste to tehniko izbrali,</li>
+</ul></li>
+<li>po potrebi lahko dodate tudi nove datoteke.</li>
+</ul>
+</div>
+<script src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/jquery.mark.min.js.prenos"></script>
+<script>
+  var options_dodaj = {acrossElements: true, element: "dodaj"};
+  var options_izbrisi = {acrossElements: true, element: "izbrisi"};
+</script>
+<style>
+  .skrivanje {
+    font-size:70%;
+    padding-left:5px;
+  }
+  .skrivanje:hover {
+    color:darkred;
+    cursor:pointer;
+  }
+</style>
+<script>
+$(document).ready(() => {
+  let nastavitve = localStorage.getItem("DN2");
+  if (!nastavitve) nastavitve = {};
+  else nastavitve = JSON.parse(nastavitve);
+  
+  $(".skrivanje").each(function() {
+    let naslov = $(this).parent().text();
+    if (nastavitve[naslov] != undefined && !nastavitve[naslov]) {
+      $(this).removeClass("fa-circle-exclamation");
+      $(this).addClass("fa-circle-check");
+      $(this).parent().next().toggle();
+    }
+  });
+
+  $(".skrivanje").click(function() {
+    let naslov = $(this).parent().text();
+    let prikazano = $(this).hasClass("fa-circle-exclamation");
+    if (prikazano) {
+      $(this).removeClass("fa-circle-exclamation");
+      $(this).addClass("fa-circle-check");
+    } else {
+      $(this).removeClass("fa-circle-check");
+      $(this).addClass("fa-circle-exclamation");
+    }
+    $(this).parent().next().toggle("slow");
+    nastavitve[naslov] = !prikazano;
+    localStorage.setItem("DN2", JSON.stringify(nastavitve));
+  });
+});
+</script>
+
+</div>
+</div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function() {
+    
+    $("a").click(function(e) {
+      if (
+        $(this).has(".fa-solid").length == 1 || 
+        $(this).has(".fa-brands").length == 1 || 
+        $(this).has(".fa-regular").length == 1 || 
+        $(this).has("img.git").length == 1
+      ) {
+        e.preventDefault();
+        window.open($(this).attr("href"), '_blank');
+      }
+    });
+  });
+</script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q6109Y2092');
+</script>
+            </div></div></div></section>
+
+          </div>
+        </div>
+      </div>
+<a href="https://teaching.lavbic.net/OIS/2022-2023/P5-V5.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="https://teaching.lavbic.net/OIS/2022-2023/P6.html" class="navigation navigation-next " aria-label="Next page" style="margin-right: 17px;"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/app.min.js.prenos"></script>
+<script src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/clipboard.min.js.prenos"></script>
+<script src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/plugin-search.js.prenos"></script>
+<script src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/plugin-sharing.js.prenos"></script>
+<script src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/plugin-fontsettings.js.prenos"></script>
+<script src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/plugin-bookdown.js.prenos"></script>
+<script src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/jquery.highlight.js.prenos"></script>
+<script src="./Poglavje 11 DN Spletna aplikacija FRI izletnik _ Osnove informacijskih sistemov 2022_2023_files/plugin-clipboard.js.prenos"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": {}
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 1
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+},
+"toolbar": {
+"position": "fixed"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
