@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Teaching API - Vnos in poizvedovanje po EHR podatkih</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./favicon.png" />
+  </head>
+  <body>
+    <div class="container mb-4">
+      <div class="page-header">
+        <h2 class="mt-4 mb-2">
+          Vnos in poizvedovanje po zdravstvenih podatkih
+          <small class="text-muted">Teaching API platforma</small
+          ><a href="dokumentacija/index.html"
+            ><small
+              ><small
+                ><small
+                  ><i
+                    class="fa-solid fa-circle-question ms-2"
+                  ></i></small></small></small
+          ></a>
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="card mt-4">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-8">
+                  <b>Kreiraj EHR zapis</b> za novega bolnika
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                  <select
+                    class="form-select form-select-sm"
+                    id="preberiPredlogoBolnika"
+                  >
+                    <option value=""></option>
+                    <option value="Pujsa,Pepa,1938-10-30">Pujsa Pepa</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="badge bg-secondary">Ime</span
+              ><input
+                id="kreirajIme"
+                type="text"
+                class="form-control form-control-sm mb-2"
+                placeholder="Ata"
+              />
+              <span class="badge bg-secondary">Priimek</span
+              ><input
+                id="kreirajPriimek"
+                type="text"
+                class="form-control form-control-sm mb-2"
+                placeholder="Smrk"
+              />
+              <span class="badge bg-secondary">Datum rojstva</span
+              ><input
+                id="kreirajDatumRojstva"
+                type="text"
+                class="form-control form-control-sm mb-2"
+                placeholder="1957-03-10"
+              />
+              <button
+                type="button"
+                class="btn btn-primary btn-sm"
+                onclick="kreirajEHRzaBolnika()"
+              >
+                Dodaj osnovne podatke o bolniku</button
+              ><span id="kreirajSporocilo"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="card mt-4">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-8">
+                  <b>Preberi EHR zapis</b> obstoječega bolnika
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                  <select
+                    class="form-select form-select-sm"
+                    id="preberiObstojeciEHR"
+                  >
+                    <option value=""></option>
+                    <option value="54a6dd28-e357-4054-b363-c272b8b59449">
+                      Pujsa Pepa
+                    </option>
+                    <option value="5807d226-1c82-4f10-ae9a-43b460d2a90a">
+                      Ata Smrk
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="badge bg-secondary">EHR ID</span
+              ><input
+                id="preberiEHRid"
+                type="text"
+                class="form-control form-control-sm mb-2"
+                placeholder="7b661e12-3a98-21ad-c29e-2dc9f5a3d885"
+              />
+              <button
+                type="button"
+                class="btn btn-primary btn-sm"
+                onclick="preberiEHRodBolnika()"
+              >
+                Preberi osnovne podatke o bolniku</button
+              ><span id="preberiSporocilo"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="card mt-4">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-8">
+                  <b>Vnos</b> meritve <b>vitalnih znakov</b> bolnika
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                  <select
+                    class="form-select form-select-sm"
+                    id="preberiObstojeciVitalniZnak"
+                  >
+                    <option value=""></option>
+                    <option
+                      value="5807d226-1c82-4f10-ae9a-43b460d2a90a|2019-04-22T11:40Z|185|80.0|36.50|118|92|98|medicinska sestra Smrketa"
+                    >
+                      Ata Smrk
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="badge bg-secondary">EHR ID</span
+              ><input
+                id="dodajVitalnoEHR"
+                type="text"
+                class="form-control form-control-sm mb-2"
+                placeholder="7b661e12-3a98-21ad-c29e-2dc9f5a3d885"
+              />
+              <span class="badge bg-secondary">Datum in ura</span
+              ><input
+                id="dodajVitalnoDatumInUra"
+                type="text"
+                class="form-control form-control-sm mb-2"
+                placeholder="2014-11-21T11:40Z"
+              />
+              <span class="badge bg-secondary">Telesna višina</span>
+              <div class="input-group input-group-sm mb-2">
+                <input
+                  id="dodajVitalnoTelesnaVisina"
+                  type="text"
+                  class="form-control"
+                  placeholder="185"
+                /><span class="input-group-text">cm</span>
+              </div>
+              <span class="badge bg-secondary">Telesna teža</span>
+              <div class="input-group input-group-sm mb-2">
+                <input
+                  id="dodajVitalnoTelesnaTeza"
+                  type="text"
+                  class="form-control"
+                  placeholder="80.00"
+                /><span class="input-group-text">kg</span>
+              </div>
+              <span class="badge bg-secondary">Telesna temperatura</span>
+              <div class="input-group input-group-sm mb-2">
+                <input
+                  id="dodajVitalnoTelesnaTemperatura"
+                  type="text"
+                  class="form-control"
+                  placeholder="36.50"
+                /><span class="input-group-text">°C</span>
+              </div>
+              <span class="badge bg-secondary">Sistolični krvni tlak</span>
+              <div class="input-group input-group-sm mb-2">
+                <input
+                  id="dodajVitalnoKrvniTlakSistolicni"
+                  type="text"
+                  class="form-control"
+                  placeholder="118"
+                /><span class="input-group-text">mm Hg</span>
+              </div>
+              <span class="badge bg-secondary">Diastolični krvni tlak</span>
+              <div class="input-group input-group-sm mb-2">
+                <input
+                  id="dodajVitalnoKrvniTlakDiastolicni"
+                  type="text"
+                  class="form-control"
+                  placeholder="92"
+                /><span class="input-group-text">mm Hg</span>
+              </div>
+              <span class="badge bg-secondary">Nasičenost krvi s kisikom</span>
+              <div class="input-group input-group-sm mb-2">
+                <input
+                  id="dodajVitalnoNasicenostKrviSKisikom"
+                  type="text"
+                  class="form-control"
+                  placeholder="98"
+                /><span class="input-group-text">%</span>
+              </div>
+              <span class="badge bg-secondary">Merilec</span
+              ><input
+                id="dodajVitalnoMerilec"
+                type="text"
+                class="form-control form-control-sm mb-2"
+                placeholder="medicinska sestra Hrastova Micka"
+              />
+              <button
+                type="button"
+                class="btn btn-primary btn-sm"
+                onclick="dodajMeritveVitalnihZnakov()"
+              >
+                Dodaj meritve vitalnih znakov</button
+              ><span id="dodajMeritveVitalnihZnakovSporocilo"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6">
+          <div class="card mt-4">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                  <b>Pregled</b> meritev <b>vitalnih znakov</b> bolnika
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                  <select
+                    class="form-select form-select-sm"
+                    id="preberiTipZaVitalneZnake"
+                  >
+                    <option value="Telesna temperatura">
+                      telesna temperatura
+                    </option>
+                    <option value="Telesna teža">telesna teža</option>
+                  </select>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                  <select
+                    class="form-select form-select-sm"
+                    id="preberiEhrIdZaVitalneZnake"
+                  >
+                    <option value=""></option>
+                    <option value="5807d226-1c82-4f10-ae9a-43b460d2a90a">
+                      Ata Smrk
+                    </option>
+                    <option value="54a6dd28-e357-4054-b363-c272b8b59449">
+                      Pujsa Pepa
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <span class="badge bg-secondary">EHR ID</span
+              ><input
+                id="meritveVitalnihZnakovEHRid"
+                type="text"
+                class="form-control form-control-sm mb-2"
+                placeholder="7b661e12-3a98-21ad-c29e-2dc9f5a3d885"
+              />
+              <button
+                type="button"
+                class="btn btn-primary btn-sm"
+                onclick="preberiMeritveVitalnihZnakov()"
+              >
+                Preberi meritve vitalnih znakov</button
+              ><span id="preberiMeritveVitalnihZnakovSporocilo"></span>
+              <div id="rezultatMeritveVitalnihZnakov"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="demo.js"></script>
+  </body>
+</html>

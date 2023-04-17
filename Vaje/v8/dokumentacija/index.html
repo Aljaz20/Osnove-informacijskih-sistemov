@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Dokumentacija</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h2>Dokumentacija <small class="text-muted">enostaven primer</small></h2>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <h4>Primeri uporabe</h4>
+          <p>
+            Naš enostavni primer je sestavljen iz 4 primerov uporabe (PU), ki so
+            prikazani na diagramu primerov uporabe. Podprli smo naslednji
+            skupini funkcionalnosti:
+          </p>
+          <ul>
+            <li>
+              delo z EHR zapisi:
+              <ul>
+                <li><b>kreiranje EHR zapisa</b> za novega bolnika,</li>
+                <li><b>branje EHR zapisa</b> obstoječega bolnika,</li>
+              </ul>
+            </li>
+            <li>
+              delo z vitalnimi znaki bolnika:
+              <ul>
+                <li><b>vnašanje</b> meritve <b>vitalnih znakov</b> bolnika,</li>
+                <li><b>pregled</b> meritev <b>vitalnih znakov</b> bolnika.</li>
+              </ul>
+            </li>
+          </ul>
+          <img
+            src="https://teaching.lavbic.net/plantuml/png/ZPF1Jjj048Rl-nGZUW5B72lrL84Hg5LLAQeefrp6ziHPRCz6isFJ1l48F0JlKjwBtOI4ZKshNYpjF___pMXsVUOLHVkkXPdOZiH2ltA21S4Q8KTkN8TgZ6yihr2mWmBBfXRNSrMwrWce8FjG8jR4LT42-rQlwPUUjxRcBfIX31-InDLxAj4Jt1j8k1SRxjtIAaNTIKMorJvylCe_NLu45KNStLOisf0q3maMItMI9xcjPMnuj-6RYPt-UxA5Oztke1RylHyraHwCQMcXe0x4rak5oWgLQXqRiva1VcwMpRPvFHzT4vPBo_MSpsTVZm0zx9HmDcQtiUCi-oPam-vl2Iw__CYoEMVP6bVMOvR5ksCtK8rpBbmRy7WIKSVxp4bAol-2cRChlBfR-lCuHULJpWtZyrDKmmJnAUb04JTOnH1SmfgnSKFa7f12pCVKznYXuG0v4wfRgdP06lu7-1hQyyn-ot1w-lbW2wDA_huycN1KdpHCMcmSwHtkcamBupPJnwZHn63EYAlmCxy0"
+            width="400"
+            class="mt-4 mb-4"
+          />
+          <h4>VOPC razredni diagrami</h4>
+          <p>
+            Če pogledamo načrt informacijske rešitve (ki ga bodo morali tudi
+            študenti pripraviti pri 3. DN), je eden izmed pomembnejših diagramov
+            <b>VOPC</b> (razredni diagram sodelujočih razredov oz.
+            <i>angl. View of Participating Classes)</i>.
+          </p>
+          <p>
+            Na <b>VOPC diagramu</b> prikažemo celotno strukturo demo aplikacije,
+            ki je sestavljena iz naslednjih osrednjih komponent:
+          </p>
+          <ul>
+            <li>
+              mejni razred <b>Index</b>, ki je implementiran v obliki datoteke
+              index.html,
+            </li>
+            <li>
+              kontrolni razred <b>Demo</b>, ki je implementiran v obliki
+              datoteke demo.js in
+            </li>
+            <li>
+              mejni razred <b>TeachingAPI</b>, ki predstavlja vmesnik (API) do
+              oddaljenega strežnika Teaching API.
+            </li>
+          </ul>
+          <img
+            src="https://teaching.lavbic.net/plantuml/png/fLLRJzim57xFhx340oNGzcdI5274fTtMCMZL5XuGqdII71etZbtPRhXC_BMzxN_js6aX1TfLseiLd_Dztxdus3as5hIT5u8DEq5WSYvdeA5WYG1ZsA-0iHYIVABLNAPdIYZDxZDkqTcLJb5NjfrFNqu_Ty_82bgh-yeO2s86ppLHgInkhJdHy4YcEoNjYi7YWpqHV28Bb9ObjA1UYV8gddYUrI0DkGWPxBx2Kho3kR3ZZ-GodY9Bk4u41hj-Ks0HepP1SEORqvCfFh33mzY50VruTEJhsiarSWtJNe4Heq1p-zEbM_CCDES5vcky7Q2Z6AgfiIMyXSmqKWQy-stOIz_wKfN2z9fR458HO9FRX-Z9AmsRK6CKQ2HSSyFbDi0nFcq7AsQeAOFDqSzrAVbOG3xYnYh14yctWdSuR8E_1CFfe9MnnEIZSoeoLyKcnWKrNc3o5bAGsPPOWNXs8o5NvHjGiqdBlXVh6wbAYGFwjZdsJnMHydbZpm7eT4jIsmJn6XSVXNoHS0Eo3l6ydDqE5ef6Dw6BfPLOJ6up1dU2ncek9zNUu9KMTPEhP6U2aWAu6UyqzchU_SK8q_ZTG9KthEH5ZdwwulZFWYWP9OS8wMEzkZ52ab5A9uFU-_jvw5-4oBqaHvcrCnErstP1Q0aeOvwq9DfslpTgkuQqbsKt1_tHE8eMDJOoYegwUJAtcTBy2InNSjaBQihtKV-o7qynyGFGwVxeZhjH56iQj8tK0zRhr6HAnLFNXwzT2Ztp8y7RfPQqaD0AT2NYUq8DVC1oCPqdQxc3gneNdkR-hDVp3nZTRFTqZY6chuYUS2KGP2tzPVrBqQeFcpBoJ3fHFwdDPlNQlkng9nm4_fUY-IIpJDtvqOvOhvXLEL7gKjtAab5WmkNyLePXIfZMr8HXgoB7obfLEBOFyoywTw1MPWlnWK8jjOXT5_JayPmrmf3sORXtArF5L9g2cD8bce2Jevhnpszt9yBGxPSAp5DQGN2CCgNVyry0"
+            width="700"
+            class="mt-4 mb-4"
+          />
+          <p>
+            V mejnem razredu <b>TeachingAPI</b> so predstavljene
+            funkcionalnosti, ki jih ponuja Teaching API strežnik. Gre za
+            neposredno sliko dokumentacije API vmesnika, ki je na voljo preko
+            <b
+              ><a href="https://teaching.lavbic.net/api/docs/"
+                ><span
+                  class="fas fa-globe-europe"
+                  style="padding-right: 3px"
+                ></span
+                >Swagger UI</a
+              ></b
+            >. Prikazuje funkcionalnosti (način dostopa: GET, POST, PUT ali
+            DELETE), parametre in podatkovni tip odgovora.
+          </p>
+          <h4>Diagram zaporedja</h4>
+          <p>
+            Če želimo programerju predstaviti dovolj informacij za razvoj
+            željene funkcionalnosti, mu moramo, polega diagrama primerov uporabe
+            in VOPC diagrama, pripraviti tudi diagram zaporedja. V nadaljevanju
+            je pripravljen diagram zaporeda, ki predstavlja realizacijo
+            osnovnega toka dogodkov primera uporabe "<b>Kreiranje EHR zapisa</b>
+            za novega bolnika".
+          </p>
+          <img
+            src="https://teaching.lavbic.net/plantuml/png/bLHDRnf13BtFhx3e9MneE5Mga5ebX4IbgXIKZql5PTWrO7RNivsP9JHHVap-I6xyhtg704CQgUe1PFoU_Pxj4QVEQ-lhie31JwNcb25CZV4JirBAvSILjhg4YKxpcJKrPwafZ0LlDJk1a7t4od2gwyBVuigV5JJZKc18vGjjnDAfDxPlR8RsF3IR5DBzBy9ESKEwdvF7c6IjkO_g0IBGuQyQESKVD9KFOwpsuTDb__F5-JliaIo2Kgeq-_yl-8TTDXxXKK6qoPWe-KXnPlLlIKqD-tIVU59XCN1N6QidJBbIrTu0j7f3pd3L0kqWH6_G0POcW4tm1hj5dSw9PsC-6mq3QPkHtqe5ysQ9TjCOUd1J5UXPZzarBs7CIK8DSZBtPP4agWlxaaPEAhxVZ3dJNjAvRlYPf4yMxWqvafMQovhpb0phWetpD6RMa2HR3WWfIPfUOWBNBxAHMjerMwAbbexxHUqY-FZrTORZOxK9een8ThkmP7G4L28SvHR9wiMmn7O7AakIpCSid2qoskJQG0moNLs2DGldb_g0DMYGwmtGtik6pGJLp6HwSUNOYFP8Of_ZLTyKpKH7RHLu1tpfNLcSe2MeJB7Gi3VQ2Sg7ziHTd8tj03q4o8M38eHxqZkIEBV30VI-m0nPT1knGUGjFbpWLs4Cwkg7Eh2FGeFEeTD3cnruTryPxYuQlygDykvwOIdqKD7wcS1CbYWFfZ2zC5phpbMuVcRpAi1myUqQ7eEZfvEMKgV8cVm5_W40"
+            width="600"
+            class="mt-4 mb-4"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
