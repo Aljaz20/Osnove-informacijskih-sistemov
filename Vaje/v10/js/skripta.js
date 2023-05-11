@@ -128,7 +128,7 @@ const posljiSporocilo = () => {
             posodobiUporabnike();
         },
         error: function (err) {
-            alert(err.responseJSON.NAPAKA);
+            alert(err.responseJSON.status);
         }
     });
 };
