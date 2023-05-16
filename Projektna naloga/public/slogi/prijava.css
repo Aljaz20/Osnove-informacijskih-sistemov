@@ -10,10 +10,166 @@
 .poravnavanasredino {
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 }
 td{
   padding: 3px;
 }
 th{
   padding: 6px;
+}
+
+#button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+#eth-racun {
+  opacity: 0.5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+#prijava-gumb{
+  width: 28%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: rgb(107, 107, 107);
+  height:max-content;
+}
+
+#prijava-gumb:hover {
+  background-color: rgb(90, 90, 90);
+}
+
+#like-button{
+  width: 38%;
+  height:max-content;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: 600;
+  border: none;
+  background-color: #dc3545;
+  color: #fff;
+}
+#like-button:hover {
+  background-color: #c82333;
+}
+#like-button:disabled {
+  opacity: 0.5;
+}
+
+#pregled-donacij-gumb{
+  width: 27%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: rgb(226, 192, 0);
+  height:max-content;
+}
+
+#pregled-donacij-gumb:hover {
+  background-color: rgb(199, 170, 7);
+}
+
+#potrdi-donacijo{
+  color: #fff;
+  background-color: #dc3545;
+  font-weight: 400;
+  border: none;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  height:max-content;
+}
+
+#potrdi-donacijo:hover {
+  background-color: #c82333;
+}
+
+#zapri-gumb{
+  color: #fff;
+  background-color: rgb(145, 145, 145);
+  font-weight: 400;
+  border: none;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  height:max-content;
+}
+
+#zapri-gumb:hover {
+  background-color: rgb(128, 128, 128);
+}
+
+#gumb-potrdi-prijavo{
+  color: #fff;
+  background-color: rgb(36, 158, 245);
+  font-weight: 400;
+  border: none;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  height:max-content;
+}
+
+#gumb-potrdi-prijavo:hover {
+  background-color: rgb(0, 125, 250);
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #ddd;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  background: #c82333;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #dc3545;
+  cursor: pointer;
 }

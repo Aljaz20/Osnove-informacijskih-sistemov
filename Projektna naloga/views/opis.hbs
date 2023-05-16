@@ -8,14 +8,17 @@
     </div>
     <div class="card-body">
       <!-- ZAČETEK: Opis ideje, ki jo funkcionalnost podpira -->
-      <p>
-        <strong><i class="fa-solid fa-list-check me-1"></i>TO-DO</strong>: Na
-        tem mestu je potrebno dodati
-        <strong>osnovni opis ideje rešitve</strong>
-        (kakšen je osnovni SCENARIJ UPORABE, KDO je ciljna publika (gost ali
-        prijavljen uporabnik), za kakšen NAMEN se funkcionalnost uporablja).
+       <p>
+        <strong>Neprijavljeni uporabnik oz. gost</strong> lahko na strani za prijavo vpiše kraj in število dni in se mu tako prikaže <strong>grafikon</strong>, ki
+        prikazuje vremensko napoved za izbran kraj. Poleg tega pa se lahko prijavi z uporabo ETH denarnice in všečka spletno stran tako, da lastniku spletne aplikacije
+        donira izbrano število ETH.
       </p>
-      <p class="text-muted mb-0">Opis naj ne bo daljši od 200 besed.</p>
+      <p>
+        <strong>Prijavljeni uporabnik</strong> pa lahko poleg tega še dodatno med brskanjem po seznamu turističnih znamenitosti in dodajanju le teh
+        v košarico, vidi katere so <strong>največkrat dodane destinacije</strong> po kategorijah oz. skupaj in si tako lažje izbere, kam bi se odpravil. Povrhu vsega
+        tega pa tudi lahko sam <strong>doda svojo najljubšo destinacijo</strong>.
+      </p>
+      
       <!-- KONEC: Opis ideje, ki jo aplikacija podpira -->
     </div>
   </div>
@@ -29,11 +32,24 @@
     <div class="card-body">
       <!-- ZAČETEK: Uporabljeni zunanji viri podatkov -->
       <p class="mb-0">
-        <strong><i class="fa-solid fa-list-check me-1"></i>TO-DO</strong>: Na
-        tem mestu je potrebno navesti zunanji vir podatkov (URL naslov), na
-        kakšen način ste ga uporabili (neposredni API klic, uvožena statična
-        datoteka ipd.) in kaj je bil namen uporabe (kako se vključuje v osnovno
-        idejo aplikacije).
+        <p>Za <strong>pridobitev zemljepisne dolžine in širine</strong> kraja, ki ga uporabnik vpiše na strani za prijavo, sem uporabil <a href="https://api-ninjas.com/api/city" target="_blank"><i class="fa-solid fa-earth-europe"></i>
+        API Ninjas</a>.</p>
+        Za <strong>prikaz podatkov o vremenu</strong> sem uporabil <a href="https://open-meteo.com/en/docs" target="_blank"><i
+            class="fa-solid fa-earth-europe"></i>Weather Forecast API</a>. S tem sem želel prijavljenemu uporabniku olajšati načrtovanje potovanja, saj mu
+        prikažem vremensko napoved za izbrani kraj za določeno število dni vnaprej.
+      </p>
+      
+      <p>
+        Za možnost <strong>všečkanja spletne aplikacije</strong> na podlagi tehnologije veriženja blokov sem uporabil <a href="https://sensei.lavbic.net" target="_blank"><i
+            class="fa-solid fa-earth-europe"></i>Sensei verigo blokov</a>. S tem sem želel obiskovalcu spletne strani omogočiti, da lahko všečka spletno
+            stran, to pa stori tako, da se najprej prijavi v svoj račun in nato nakaže nekaj sredstev iz njegove ETH denarnice v denarnico lastnika spletne aplikacije.
+      </p>
+      <p>
+        Za <strong>prikaz podatkov o največkrat dodanih turističnih destinacij</strong> sem uporabil <a href="https://teaching.lavbic.net/api/docs/" target="_blank"><i
+            class="fa-solid fa-earth-europe"></i>Platformo Teaching API</a>. S tem sem želel prijavljenemu uporabniku prikazati, katere destinacije so bile največkrat dodane
+            na seznam in mu tako prihraniti čas pri iskanju najbolj priljubljenih destinacij. Uporabnik ima možnost izbire kategorije turističnih destinacij. Poleg
+            tega pa ima možnost dodajanja svoje najljubše destinacije na seznam. Seznam ima dodatno <strong>kategorijo "ostalo"</strong>, kamor se doda destinacija, ki jo ročno dodaja
+            uporabnik.
       </p>
       <!-- KONEC: Uporabljeni zunanji viri podatkov -->
     </div>
@@ -48,9 +64,11 @@
     <div class="card-body">
       <!-- ZAČETEK: Master/detail načrtovalski vzorec -->
       <p class="mb-0">
-        <strong><i class="fa-solid fa-list-check me-1"></i>TO-DO</strong>: Na
-        tem mestu morate navesti uporabljen master/detail načrtovalski vzorec in
-        na kakšen način ga nameravate uporabiti.
+        <i class="fa-solid fa-list-check me-1"></i>
+        <strong>Prijavljeni uporabnik</strong> ima možnost <strong>izbire kategorije turističnih znamenitosti</strong>, ki jo želi pregledati. Na podlagi
+        izbire se mu prikaže seznam <strong>10 največkrat dodanih turističnih destinacij</strong>, ki spadajo v izbrano kategorijo. Poleg tega ima možnost
+        <strong>dodajanja svoje najljubše turistične destinacije</strong> na ta seznam. Odvisno od tega, ali je turistična destinacija že dodana na seznam ali ne,
+          se mu izpiše besedilo, ki mu pove koliko uporabnikov je to destinacijo že dodalo na seznam oz. da je destinacijo prvi dodal on sam.
       </p>
       <!-- KONEC: Master/detail načrtovalski vzorec -->
     </div>
@@ -66,12 +84,10 @@
     <div class="card-body">
       <!-- ZAČETEK: Uporabljeni zunanji viri podatkov -->
       <p class="mb-0">
-        <strong><i class="fa-solid fa-list-check me-1"></i>TO-DO</strong>: Na
-        tem mestu je potrebno navesti uporabljeno tehniko vizualizacije
-        podatkov, kjer obvezno uporabite knjižnico
-        <a href="https://canvasjs.com/" target="_blank"><i
-            class="fa-solid fa-earth-europe"
-          ></i>canvasJS</a>).
+        <i class="fa-solid fa-list-check me-1"></i>
+        Za vizualizacijo sem uporabil <strong>črtni grafikon</strong>, ki ponazarja gibanje maksimalne in minimalne dnevne temperature.
+        Poleg tega graf <strong>prekrivajo slikice</strong>, ki predstavljajo tip vreme za posamezen dan. Na ta način uporabniku omogočim, da na enem mestu vidi vremensko napoved za
+        izbrani kraj in obdobje.
       </p>
       <!-- KONEC: Uporabljeni zunanji viri podatkov -->
     </div>

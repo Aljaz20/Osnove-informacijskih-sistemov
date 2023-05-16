@@ -218,7 +218,7 @@ function popust(ime) {
         najpogostejsa_count = crke[crka];
         }
     }
-    if(najpogostejsa_crka == null){
+    if(najpogostejsa_crka == null || najpogostejsa_count == 1){
         return 0;
     }
     return najpogostejsa_crka.charCodeAt(0);

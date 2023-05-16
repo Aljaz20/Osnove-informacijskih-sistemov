@@ -12,12 +12,169 @@ var markerji = [];
 const FRI_LAT = 46.05004;
 const FRI_LNG = 14.46931;
 
+//baseURL
+const GITHUBRACUN = "aljaz200";
+var baseURL = "https://teaching.lavbic.net/api/OIS/baza/" + GITHUBRACUN + "/podatki/";
+
+window.onload = () => {
+  Prikazidestinacije();
+};
+
+//Dodaj destinacijo
+function Dodajdestinacijo(){
+  const ime = document.getElementById("ime").value;
+  $.ajax({
+    url: baseURL + "vrni/vsi",
+    type: "GET",
+    success: function (podatki) {
+      var stevilo = 1;
+      let i = 0;
+      var vrsta = "ostalo";
+      for(let obj of Object.values(podatki)){
+        
+        if(obj.ime == ime){
+          console.log("ZE V BAZI");
+          vrsta = obj.vrstaDestinacije;
+          var povedek = "je";
+          var samostalnik = "uporabnikov";
+          var glagol = "izbralo"
+          if(obj.count % 100 == 1){
+            povedek = "je";
+            samostalnik = "uporabnik";
+            glagol = "izbral"
+          }else if(obj.count % 100 == 2){
+            povedek = "sta";
+            samostalnik = "uporabnika";
+            glagol = "izbrala"
+          }else if(obj.count % 100 <5 && obj.count % 100 > 2){
+            povedek = "so";
+            samostalnik = "uporabniki";
+            glagol = "izbrali"
+          }
+          $("#Odgovor").html("<b>Dobra izbira.</b> Destinacijo "+povedek+" pred vami že "+glagol+" <b>" + obj.count + "</b> "+samostalnik+".");
+          stevilo = obj.count+1;
+          i = obj.id;
+          break;
+        }
+        i++;
+      }
+      if(stevilo == 1){	
+        $("#Odgovor").html("<b>Super!</b> Ste <b>prvi</b>, ki ste dodali to destinacijo.");
+      }
+      var data = {
+        id: i,
+        ime: ime,
+        vrstaDestinacije: vrsta,
+        count: stevilo,
+      };
+      $.ajax({
+        url: baseURL + "azuriraj?kljuc=" + i +"&elementTabele=false",
+        type: "PUT",
+        data: JSON.stringify(data),
+        contentType: "application/json",
+        success: function (data) {
+          console.log("DODANO");
+          Prikazidestinacije();
+        }
+      });
+    },
+    error: function (err) {
+      console.log(err);
+    }
+  });
+}
+
+//Prikazi top destinacije
+function Prikazidestinacije(){
+  const vrsta = document.getElementById("category").value;
+
+  $.ajax({
+    url: baseURL + "vrni/vsi",
+    type: "GET",
+    success: function (podatki) {
+      const podatkinovo = [];
+      for(let obj of Object.values(podatki)){
+        
+        if(obj.id != undefined){
+          podatkinovo.push(obj);
+        }
+      }
+      var filtrirano = podatkinovo;
+      if(vrsta !== "skupaj"){
+        filtrirano = [];
+        filtrirano = podatkinovo.filter((destinacija) => destinacija.vrstaDestinacije === vrsta);
+      }
+      
+      filtrirano.sort((a, b) => b.count - a.count);
+
+      const topDestinacije = filtrirano.slice(0, 10);
+      $("#seznam-destinacij").empty();
+      for(let i = 0; i < topDestinacije.length; i++){
+        $("#seznam-destinacij").append("\
+          <tr>\
+              <th scope='row'>" + (i+1) + "</th>\
+              <td>" + topDestinacije[i].ime + "</td>\
+              <td>" + topDestinacije[i].vrstaDestinacije + "</td>\
+              <td>" + topDestinacije[i].count  + "</td>\
+          </tr>\
+          ");
+      }
+    },
+    error: function (err) {
+      console.log(err);
+    }
+  });
+}
+
 
 // Premakni destinacijo iz seznama (desni del) v košarico (levi del)
-const premakniDestinacijoIzSeznamaVKosarico = (id, ime, lat, lng, azuriraj) => {
+const premakniDestinacijoIzSeznamaVKosarico = (id, ime, lat, lng, vrstaDestinacije ,azuriraj) => {
   if (azuriraj)
     $.get("/kosarica/" + id, (podatki) => {
-      /* Dodaj izbrano destinacijo v sejo */
+      let stevec = 1;
+      $.ajax({
+        url: baseURL + "vrni/" + id,
+        type: "GET",
+        success: function (temppodatki) {
+          stevec = temppodatki.count+1;
+          var data = {
+            id: id,
+            ime: ime,
+            vrstaDestinacije: vrstaDestinacije,
+            count: stevec,
+          };
+          $.ajax({
+            url: baseURL + "azuriraj?kljuc=" + id +"&elementTabele=false",
+            type: "PUT",
+            data: JSON.stringify(data),
+            contentType: "application/json",
+            success: function (data) {
+              console.log("SUPER");
+              Prikazidestinacije();
+            }
+          });          
+        },
+        error: function (err) {
+          console.log("NI v bazi");
+          var data = {
+            id: id,
+            ime: ime,
+            vrstaDestinacije: vrstaDestinacije,
+            count: stevec,
+          };
+          $.ajax({
+            url: baseURL + "azuriraj?kljuc=" + id +"&elementTabele=false",
+            type: "PUT",
+            data: JSON.stringify(data),
+            contentType: "application/json",
+            success: function (data) {
+              console.log("DODANO");
+              Prikazidestinacije();
+            }
+          });
+        },
+      });
+      
     });
 
   // Dodaj destnacijo v desni seznam
@@ -35,6 +192,9 @@ const premakniDestinacijoIzSeznamaVKosarico = (id, ime, lat, lng, azuriraj) => {
       "</span>\
             <!--<i class='far fa-clock'></i>--><span class='lng' style='display: none'>" +
       lng +
+      "</span>\
+            <!--<i class='far fa-clock'></i>--><span class='vrstaDestinacije' style='display: none'>" +
+      vrstaDestinacije +      
       "</span><!-- min -->\
               </button> \
                 <input type='button' onclick='podrobnostiDestinacije(" +
@@ -61,11 +221,11 @@ const premakniDestinacijoIzSeznamaVKosarico = (id, ime, lat, lng, azuriraj) => {
     const mk = markerji.find((m) => m.getLatLng().lat == sirina && m.getLatLng().lng == dolz);
     const indeks = markerji.indexOf(mk);
     mapa.removeLayer(mk);
-    let temp = tockePoti.slice(0, indeks-1).concat(tockePoti.slice(indeks));
+    let temp = tockePoti.slice(0, indeks).concat(tockePoti.slice(indeks+1));
     tockePoti = [];
     tockePoti = temp;
     temp = [];
-    temp = markerji.slice(0, indeks).concat(markerji.slice(indeks + 1));
+    temp = markerji.slice(0, indeks).concat(markerji.slice(indeks+1));
     markerji = [];
     markerji = temp;
     prikazPoti();
@@ -115,6 +275,9 @@ function prikazPoti() {
   pot = L.Routing.control({
     waypoints: tockePoti,
     language: 'sl',
+    createMarker: function (){
+      return null;
+    },
     lineOptions: {
       styles: [
         {
@@ -126,11 +289,6 @@ function prikazPoti() {
     },
     fitSelectedRoutes: false,
   }).addTo(mapa);
-
-  // podrobnosti o poti, ko je ta najdena
-  pot.on("routesfound", function (e) {
-    koordinateIzbranePoti = e.routes[0].coordinates;
-  });
 }
 
 
@@ -158,7 +316,7 @@ $(document).ready(() => {
     FRI_LAT,
     FRI_LNG,
     "Fakulteta za računalništvo in informatiko",
-    "yellow"
+    "black"
   ); 
 
   // Posodobi podatke iz košarice na spletni strani
@@ -170,11 +328,22 @@ $(document).ready(() => {
         destinacija.ime,
         destinacija.zemljepisnaSirina,
         destinacija.zemljepisnaDolzina,
+        destinacija.vrstaDestinacije,
         false
       );
-      dodajMarker(destinacija.zemljepisnaSirina, destinacija.zemljepisnaDolzina, destinacija.ime, "red");
+      let barva = "yellow"
+      //če je vse ostalo - rumena
+      if(destinacija.vrstaDestinacije === "živalski vrt"){
+        //če je zoo - zelena
+        barva = "green";
+      }else if(destinacija.vrstaDestinacije === "hostel"){
+        //če je hostel - modra
+        barva = "blue";
+      }
+     
+      dodajMarker(destinacija.zemljepisnaSirina, destinacija.zemljepisnaDolzina, destinacija.ime, barva);
       tockePoti = [];
-      for(let i = 1; i < markerji.length; i++){
+      for(let i = 0; i < markerji.length; i++){
         tockePoti.push(L.latLng(markerji[i].getLatLng()));
       }
       prikazPoti();
@@ -190,12 +359,23 @@ $(document).ready(() => {
       destinacija.find(".ime").text(),
       destinacija.find(".lat").text(),
       destinacija.find(".lng").text(),
+      destinacija.find(".vrstaDestinacije").text(),
       true
     );
+
+    let barva = "yellow"
+    //če je vse ostalo - rumena
+    if(destinacija.find(".vrstaDestinacije").text() === "živalski vrt"){
+      //če je zoo - zelena
+      barva = "green";
+    }else if(destinacija.find(".vrstaDestinacije").text() === "hostel"){
+      //če je hostel - modra
+      barva = "blue";
+    }
     
-    dodajMarker(destinacija.find(".lat").text(), destinacija.find(".lng").text(), destinacija.find(".ime").text(), "red");
+    dodajMarker(destinacija.find(".lat").text(), destinacija.find(".lng").text(), destinacija.find(".ime").text(), barva);
     tockePoti = [];
-    for(let i = 1; i < markerji.length; i++){
+    for(let i = 0; i < markerji.length; i++){
       tockePoti.push(L.latLng(markerji[i].getLatLng()));
     }
     prikazPoti();
@@ -236,5 +416,7 @@ function dodajMarker(lat, lng, vsebinaHTML, barvaAnglesko) {
   marker.bindPopup(vsebinaHTML).openPopup();
 
   marker.addTo(mapa);
-  markerji.push(marker);
+  if(barvaAnglesko !== "black"){
+    markerji.push(marker);
+  }
 }

@@ -23,6 +23,10 @@
                 class="lng"
                 style="display: none"
               >{{destinacija.zemljepisnaDolzina}}</span>
+              <span
+                class="vrstaDestinacije"
+                style="display: none"
+              >{{destinacija.vrstaDestinacije}}</span>
               <div style="display: none" class="text-nowrap"></div>
             </button>
           </div>
@@ -53,6 +57,40 @@
       <br />
       <div id="mapa_id" class="mt-3"></div>
       <div class="mapa_poti"></div>
+      <div class="header">
+        <span id="tekst">Največkrat dodane destinacije:</span>
+        <select id="category">
+          <option value="skupaj">Skupaj</option>
+          <option value="živalski vrt">Živalski vrt</option>
+          <option value="hostel">Hostel</option>
+          <option value="atrakcija">Atrakcija</option>
+          <option value="ostalo">Ostalo</option>
+        </select>
+        <button onclick="Prikazidestinacije()"><i class="fas fa-search"> </i>  <strong>Prikaži</strong></button>
+      </div>
+      <div id="topdestinacije">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Ime</th>
+                <th scope="col">Kategorija</th>
+                <th scope="col">Št. dodanj</th>
+            </tr>
+            </thead>
+            <tbody id="seznam-destinacij">
+            </tbody>
+        </table>
+      </div>
+      <div>
+        <span id="tekst">Dodaj svojo najljubšo destinacijo</span>
+        <input type="text" id="ime" placeholder="Ime destinacije">
+        <button onclick="Dodajdestinacijo()"><i class="fas fa-plus"> </i>  <strong>Dodaj</strong></button>
+      </div>
+      <div>
+        <span id="Odgovor"></span>
+      </div>
+      
     </div>
   </div>
 </div>
