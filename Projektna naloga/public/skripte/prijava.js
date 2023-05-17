@@ -1,5 +1,5 @@
 let web3;
-const SENSEIRACUN= "0x8DF81423CBDe9DcaC839681c25E3d6377c972F41";
+const SENSEIRACUN= "0x61BDF29dd9D62eC444ba09389D241860bF2EE50A";
 document.getElementById("prejemnik").innerHTML = SENSEIRACUN;
 const GITHUBRACUN ="aljaz200";
 const Posljipodatke = "https://teaching.lavbic.net/api/OIS/baza/" + GITHUBRACUN + "/podatki/azuriraj?kljuc=ETH&elementTabele=true";
